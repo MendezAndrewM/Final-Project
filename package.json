@@ -1,0 +1,57 @@
+{
+  "name": "Final-Project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "seed": "node scripts/seedDB.js",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MendezAndrewM/Final-Project.git"
+  },
+  "keywords": [],
+  "contributors": [
+    {
+      "name": "Andrew Mendez",
+      "email": "Mendez.AndrewM@Gmail.com",
+      "github": "https://github.com/MendezAndrewM",
+      "url": "https://Mendez-Solutions.com"
+    },
+    {
+      "name": "Jacob Hanes",
+      "email": "",
+      "github": "https://github.com/jacobhanes",
+      "url": ""
+    },
+    {
+      "name": "Joey Duchett",
+      "email": "",
+      "github": "https://github.com/joeyduchett",
+      "url": ""
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MendezAndrewM/Final-Project/issues"
+  },
+  "devDependencies": {
+    "concurrently": "4.1.1",
+    "nodemon": "1.19.1"
+  },
+  "homepage": "https://github.com/MendezAndrewM/Final-Project#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.3",
+    "mongoose": "^5.3.16",
+    "if-env": "^1.0.4"
+  }
+}
