@@ -1,27 +1,31 @@
 import React from "react";
-import { Navbar, NavItem, Dropdown } from 'react-materialize'
+import { Navbar, NavItem, Dropdown, Divider, } from 'react-materialize'
+
+
 
 const Nav = () => {
-    <Navbar brand={<a />} alignLinks="right">
+    return( <Navbar brand={<a />} alignLinks="right">
+
     <NavItem href="">
-    Getting started
+    About
     </NavItem>
     <NavItem href="components.html">
-    Components
+    someplace
     </NavItem>
     <Dropdown trigger={<a />}>
-    <a href="#">
-    one
+    <a href="/account">
+    acount things 1 
     </a>
-    <a href="#">
-    two
+    <a href="/comments">
+    account things 2
     </a>
     <Divider/>
-    <a href="#">
-    three
+    <a href="/search">
+    account things 3
     </a>
     </Dropdown>
     </Navbar>
+        )
 }
 
 export default Nav

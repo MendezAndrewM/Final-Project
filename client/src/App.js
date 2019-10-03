@@ -1,14 +1,11 @@
 import React from 'react';
+import Nav from "./components/Nav/index"
+import Footer from "./components/Footer/index"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          This text is returned from App.js
-        </p>
-        
-      </header>
+      <Footer />
     </div>
   );
 }
