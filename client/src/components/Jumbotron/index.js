@@ -2,10 +2,12 @@ import React from "react";
 import "./style.css"
 
 
-const Jumbotron = () =>{
+const Jumbotron = ({ children }) =>{
     return(
         <div className="jumbo">
-            <h1>This is a jumbotron bisnitch</h1>
+            
+            {children}
+            
         </div>
     )
 };
