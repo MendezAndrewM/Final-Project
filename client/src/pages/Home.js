@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import Jumbotron from "../components/Jumbotron";
 import Result from "../components/Results"
 import { Row, Col } from "react-materialize";
+import SearchBar from "../components/SearchBar";
 
 
 // Lines 11-31 only exist to generate placeholder Results
@@ -32,7 +33,7 @@ for (let i = 0; i < 10; i++) {
 
 class Home extends Component {
     state = {
-        loggedin: false,
+        loggedIn: false,
     }
 
     // componentDidMount() {
@@ -45,25 +46,15 @@ class Home extends Component {
         ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
     */
 
-    
-    
-
-
-
 
 
     render() {
         return (
             <div>
-                <Nav />
-                <Jumbotron>
-                    <h1>The Thing</h1>
-                    <h5>And some stuff about the thing</h5>
-                    <a>Sign In</a>
-                </Jumbotron>
+                <Jumbotron />
                 <Row>
                     <div className="col s10 m8 offset-m2 offset-s1 ">
-                        {this.state.loggedin
+                        {this.state.loggedIn
                             ? <div>
                                 <h3>About</h3>
                                 <p> あなたは大学で何を勉強したいのですか。 「はい」と「いいえ」しか言わない
@@ -92,7 +83,6 @@ class Home extends Component {
                         {resultArr}
                     </div>
                 </Row>
-                <Footer />
             </div>
         )
     }
