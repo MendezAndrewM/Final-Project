@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Home from "./pages/Home"
 import Nav from "./components/Nav/index";
 import Footer from "./components/Footer/index";
 import Jumbotron from "./components/Jumbotron/index";
