@@ -1,0 +1,13 @@
+.teal {
+    background-color: aliceblue;
+    border-radius: 25px;
+    
+    border-width: 5px;
+    width: 50%;
+    height: 150px;
+}
+
+.cardWrapper{
+    text-align: center;
+    align-content: center;
+}
