@@ -1,13 +1,17 @@
-.teal {
-    background-color: aliceblue;
-    border-radius: 25px;
+.card-box{
     
-    border-width: 5px;
-    width: 50%;
     height: 150px;
+    border-radius: 2px;
+    border: 5px outset #0099ff;
+    margin-top: 15px;
+}
+.picture{
+    border-radius: 50%;
+    border: 5px outset #0099ff;
+    
+}
+.prof-name{
+    color: black;
+    
 }
 
-.cardWrapper{
-    text-align: center;
-    align-content: center;
-}

@@ -1,20 +1,37 @@
 import React from "react";
-import {Row, Col, CardPanel} from "react-materialize";
+import { Row, Col } from "react-materialize";
 import "./style.css";
 
 
 const Card = (props) => {
-    return(
+    return (
         <Row>
-        <Col m={6} s={12}>
-        <CardPanel className="teal">
-        <span className="white-text">
-        For a simpler card with less markup, try using a card panel which just has padding and a shadow effect
-        </span>
-        </CardPanel>
-        </Col>
+            <Col s={8} offset="s2" className="card-box">
+                <div>
+
+                    <Row>
+
+                        <Col s={6}>
+                            <img className="responsive-img picture" src={props.image} alt={props.name} />
+                        </Col>
+                        <Col s={6}>
+                            <h1 className="prof-name" alt={props.name}></h1>
+                        </Col>
+
+                    </Row>
+                    <Row>
+                        <Col s={12}>
+                            <p>Name:</p> {props.name}
+                            <p>Comments:</p> {props.comments}
+                        </Col>
+                    </Row>
+                </div>
+            </Col>
         </Row>
+
+
     )
 };
+
 
 export default Card;
