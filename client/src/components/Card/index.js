@@ -5,8 +5,8 @@ import "./style.css";
 
 const Card = (props) => {
     return (
-        <Row>
-            <Col s={8} offset="s2" className="card-box">
+        <Row className="resizer">
+            <Col s={10} offset="s1" className="card-box">
                 <div>
 
                     <Row>
@@ -15,14 +15,14 @@ const Card = (props) => {
                             <img className="responsive-img picture" src={props.image} alt={props.name} />
                         </Col>
                         <Col s={6}>
-                            <h1 className="prof-name" alt={props.name}></h1>
+                            <h1 className="prof-name">{props.name}</h1>
                         </Col>
 
                     </Row>
                     <Row>
                         <Col s={12}>
-                            <p>Name:</p> {props.name}
-                            <p>Comments:</p> {props.comments}
+                            <p><strong>Name:</strong> {props.name}</p>
+                            <p><strong>Comments:</strong> {props.comments}</p>
                         </Col>
                     </Row>
                 </div>
