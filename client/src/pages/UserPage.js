@@ -3,6 +3,7 @@ import { Row, Col } from "react-materialize";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import Card from "../components/Card";
+import Wrapper from "../components/Wrapper";
 
 
 class UserPage extends Component {
@@ -15,6 +16,7 @@ class UserPage extends Component {
         return (
             <div>
 
+
                 <Row>
                     <Nav />
                 </Row>
@@ -24,6 +26,7 @@ class UserPage extends Component {
                 <Row>
                     <Footer />
                 </Row>
+            
             </div>
         )
     }

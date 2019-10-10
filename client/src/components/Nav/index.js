@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, NavItem, Dropdown, Divider} from 'react-materialize'
+import { Navbar, NavItem} from 'react-materialize'
 import "./style.css"
 
 
@@ -8,23 +8,15 @@ const Nav = () => {
     return(
         <Navbar brand={<a />} alignLinks="right">
         <NavItem href="">
-        Getting started
+        Login/ log out
         </NavItem>
         <NavItem href="components.html">
-        Components
+        Profile
         </NavItem>
-        <Dropdown trigger={<a />}>
-        <a href="#">
-        one
-        </a>
-        <a href="#">
-        two
-        </a>
-        <Divider/>
-        <a href="#">
-        three
-        </a>
-        </Dropdown>
+        <NavItem href="components.html">
+        About 
+        </NavItem>
+        
         </Navbar>
  )
 }
