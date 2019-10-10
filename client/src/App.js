@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Home from "./pages/Home"
 import Nav from "./components/Nav/index";
 import Footer from "./components/Footer/index";
 import Jumbotron from "./components/Jumbotron/index";
@@ -9,11 +10,9 @@ import Wrapper from "./components/Wrapper";
 function App() {
   return (
     <div className="App">
-      
-
-      <UserPage />
-      
-      
+      <Nav />
+      {/* React Router Here */}
+      <Footer />
     </div>
   );
 }
