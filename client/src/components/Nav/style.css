@@ -1,0 +1,5 @@
+.nav-style{
+    background: rgb(0,153,255);
+    background: linear-gradient(180deg, rgba(0,153,255,1) 54%, rgba(253,187,45,1) 100%);
+    margin-bottom: 5px;
+}

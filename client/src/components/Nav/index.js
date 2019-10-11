@@ -7,7 +7,7 @@ import "./style.css"
 const Nav = () => {
 
     return(
-        <Navbar brand={<a />} alignLinks="right">
+        <Navbar className="nav-style" brand={<a />} alignLinks="right">
         <NavItem href="/">
         <Link to="/" className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}>
           Home
