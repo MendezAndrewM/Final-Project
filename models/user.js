@@ -2,6 +2,8 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
+  //ID number associated with each user
+  id: { type: Number, required: true },
   //Username of user
   name: { type: String, required: true },
   //Profile Picture, stored in url

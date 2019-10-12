@@ -3,6 +3,8 @@ const Schema = mongoose.Schema;
 // let imgPath = 'placeholder' <- do we need this?
 
 const businessSchema = new Schema({
+  //ID number associated with each business, for multiple locations of one chain
+  id: { type: Number, required: true },
   // Name of business
   name: { type: String, required: true },
   // Image of business, stored in a string

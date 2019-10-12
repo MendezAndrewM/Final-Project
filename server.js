@@ -13,10 +13,10 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 // Add routes, both API and view
-// app.use(routes);
+app.use(routes);
 
 mongoose.connect("mongodb://localhost/finalproject");
-// Connect to the Mongo DB hen it is set up
+// Connect to the Mongo DB when it is set up
 
 // Start the API server
 app.listen(PORT, function() {
