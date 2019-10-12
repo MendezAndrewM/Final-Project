@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 import { Row, Col } from "react-materialize";
-import Nav from "../components/Nav";
-import Footer from "../components/Footer";
+
 import Card from "../components/Card";
 
 
 const properinos = {
     name: "Jake Hanes",
-    image: "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwj2rvSlt5LlAhVCqZ4KHfUvCSsQjRx6BAgBEAQ&url=https%3A%2F%2Fvaaju.com%2Faustriaeng%2Fhelp-theres-a-face-in-my-icon%2F&psig=AOvVaw2xOhWUtxemyJ3WnLYJaSmf&ust=1570822315896561",
-    comments: "hello this is a comment",
+    image: "https://www.buffed.de/screenshots/430x/2019/09/Samwise-Icon-pc-games.png",
+    comments: ["omg this place is great", "wtf they ripped me off", "they dont work on teslas"],
 
 };
 
@@ -21,7 +20,7 @@ render() {
             
             <Card
             name={properinos.name}
-            src={properinos.image}
+            image={properinos.image}
             alt={properinos.name}
             comments={properinos.comments}
             />
