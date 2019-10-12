@@ -5,6 +5,9 @@ import Nav from "./components/Nav/index";
 import Footer from "./components/Footer/index";
 import UserPage from "./pages/UserPage";
 
+const [loggedin, login] = useState(false);
+
+
 
 
 
