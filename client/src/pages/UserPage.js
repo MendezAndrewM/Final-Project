@@ -7,7 +7,7 @@ import Card from "../components/Card";
 const properinos = {
     name: "Jake Hanes",
     image: "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiT-Ou-nZPlAhUMt54KHcabD_8QjRx6BAgBEAQ&url=https%3A%2F%2Fsolarsystem.nasa.gov%2Fsolar-system%2Fsun%2Foverview%2F&psig=AOvVaw3Rhxp5xlfgY1ydTewAitjy&ust=1570849753573127",
-    comments: "hello this is a comment",
+    comments: ["omg this place is great", "wtf they ripped me off", "they dont work on teslas"],
 
 };
 

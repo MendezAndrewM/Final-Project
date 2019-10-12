@@ -10,8 +10,8 @@ const businessSchema = new Schema({
   // Average user rating out of 5
   // avgRating: 
   //Average prices for similar services at competitors
-   // priceCompare: 
-  average: 
+   // priceCompare: todo
+  average: {type: String, required: true}, 
   // Phone number in a (###) - ### - #### format
   phone: { type: String, required: true },
   // Company website
