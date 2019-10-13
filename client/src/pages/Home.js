@@ -33,7 +33,7 @@ for (let i = 0; i < 10; i++) {
 
 class Home extends Component {
     state = {
-        loggedIn: false,
+        loggedIn: true,
     }
 
     // componentDidMount() {

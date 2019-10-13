@@ -1,7 +1,22 @@
-Footer {
-    background: rgb(0,153,255);
-    background: linear-gradient(0deg, rgba(0,153,255,1) 54%, rgba(253,187,45,1) 100%);
+#Footer {
+    /* background: rgb(0,153,255); */
+    /* background: linear-gradient(rgb(180, 214, 236), rgb(92, 128, 145), 
+    rgb(34, 72, 92), rgb(57, 86, 100), rgb(57, 86, 100), rgb(57, 86, 100), rgb(7, 35, 48)); */
+    background: linear-gradient(rgb(108, 171, 201), rgb(66, 107, 126), rgb(50, 80, 94), rgb(0, 0, 0));
     text-align: center;
-    border-radius: 2px;
-    color: white;
+    /* border-radius: 2px; */
+    color: rgb(185, 185, 185);
+    padding: 5vh;
+}
+
+a {
+    color: #bebebe;
+}
+
+ul {
+    margin: 0;
+}
+
+Row {
+    margin: 0;
 }
