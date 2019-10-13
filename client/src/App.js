@@ -7,17 +7,12 @@ import Jumbotron from "./components/Jumbotron/index";
 import Card from "./components/Card/index";
 import BusinessPage from "./pages/BusinessPage"
 import UserPage from "./pages/UserPage";
-import Seeds from "../../scripts/seedsDB"
+// import Seeds from "../../scripts/seedsDB"
 import API from "../src/utils/API"
 
-const [loggedin, login] = useState(false);
-const [ratings, rate] = useState(0);
-const [Seeds] = useState(Seeds);
-
-
-
-
-
+// const [loggedin, login] = useState(false);
+// const [ratings, rate] = useState(0);
+// const [Seeds] = useState(Seeds);
 
 
 

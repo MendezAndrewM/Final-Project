@@ -1,5 +1,10 @@
 .nav-style{
-    background: rgb(0,153,255);
-    background: linear-gradient(180deg, rgba(0,153,255,1) 54%, rgba(253,187,45,1) 100%);
-    margin-bottom: 5px;
+    /* background: rgb(97, 118, 133); */
+    background: linear-gradient(rgb(180, 214, 236), rgb(92, 128, 145), 
+    rgb(45, 93, 117), rgb(78, 115, 133), rgb(78, 115, 133), rgb(7, 35, 48));
+    /* margin-bottom: 5px; */
+}
+
+.brand-logo {
+    margin-left: 16px;
 }
