@@ -3,11 +3,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./pages/Home"
 import Nav from "./components/Nav/index";
 import Footer from "./components/Footer/index";
-import Jumbotron from "./components/Jumbotron/index";
-import Card from "./components/Card/index";
 import BusinessPage from "./pages/BusinessPage"
 import UserPage from "./pages/UserPage";
-// import Seeds from "../../scripts/seedsDB"
 import API from "../src/utils/API"
 
 // const [loggedin, login] = useState(false);
