@@ -1,0 +1,53 @@
+.ResultBox {
+    /* background-color: darkgrey; */
+    padding: .5rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px 0px darkslategray;
+}
+.ResultBox:hover {
+    cursor: pointer;
+    box-shadow: 3px 5px 24px 7px rgba(46, 69, 78, 0.876);
+    background-color: rgba(53, 81, 92, 0.876);
+    color: rgb(163, 234, 255);
+}
+.Info {
+    /* background-color: rgb(65, 132, 153); */
+    border-radius: 1rem;
+    /* box-shadow: 5px -10px 12px 5px rgba(53, 88, 88, 0.876); */
+}
+.rating {
+    color: rgb(255, 226, 65);;
+    text-shadow: 1px 1px 1px black;
+}
+
+button.col.s10.offset-s2.offset-m1.center-align {
+    background-color: rgb(53, 86, 110);
+    color: white;
+    padding: 1rem;
+    border-radius: .75rem;
+}
+button.col.s10.offset-s2.offset-m1.center-align:hover {
+    cursor: pointer;
+    background-color: rgb(147, 191, 223);
+    color: rgb(37, 46, 56);
+    /* font-weight: bold; */
+}
+@media only screen and (max-width: 600px) {
+    button.col.s10.offset-s2.offset-m1.center-align {
+        margin-top: 2rem;
+    }
+}
+
+.hide-on-med-and-down { overflow: hidden; }
+@media only screen and (max-width: 1310px) {
+    .hide-on-med-and-down { max-height: 6rem; }
+}
+@media only screen and (max-width: 1230px) {
+    .hide-on-med-and-down { max-height: 4.2rem; }
+}
+@media only screen and (max-width: 1050px) {
+    .hide-on-med-and-down { max-height: 3rem; }
+}
+
