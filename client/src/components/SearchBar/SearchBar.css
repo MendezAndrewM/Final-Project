@@ -1,1 +1,26 @@
-/*  */
+.row .col.s1 {
+    height: 3rem;
+    /* margin-left: 6px; */
+    background-color: rgb(51, 107, 153);
+    color: rgb(224, 224, 224);
+    border: none;
+    border-radius: 0 22% 22% 0;
+}
+
+.row .col.s1:hover {
+    cursor: pointer;
+    background-color: rgb(78, 154, 216);
+    color: rgb(54, 54, 54);
+}
+.row .col.s1:active {
+    border: black inset 1px;
+}
+:hover, :active {
+    -moz-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    -webkit-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+}
+.row input:not([type]) {
+    background-color: white;
+}
