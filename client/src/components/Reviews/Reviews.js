@@ -1,0 +1,46 @@
+import React, { Component } from "react";
+import { Row } from "react-materialize";
+
+class Reviews extends Component {
+
+    displayStars = num => {
+        if (num < 0.3) { return "star_half" }  //Sets minimum rating as half_star
+        else {
+            const whole = Math.floor(num);
+            const dec = (num - Math.floor(num));
+            let stars = "";
+            for (let i = 0; i < whole; i++) { stars += "star " };
+            if (dec > 0.3) { stars += "star_half" };
+            return stars;
+        }
+    }
+
+
+    render() {
+        const { reviews } = this.props
+
+        return (<div>
+            <Row>
+                <div className="reviewBox col s12 m8 offset-m2">
+
+                    <h3>Reviews</h3>
+                    {reviews.map(item =>
+                        <div className="reviewBox col s10 offset-s1">
+                            <Row>
+                                <h4 className="col s9">{item.title}</h4>
+                                <h4 className="col s3 material-icons">{this.displayStars(item.rating)}</h4>
+                                <h6 className="col s9" >Service Provided: {item.service}</h6>
+                                <h6 className="col s3" >Price: ${item.price}</h6>
+                            </Row>
+                            <Row>
+                                <p>{item.content}</p>
+                            </Row>
+                        </div>
+                    )}
+                </div>
+            </Row>
+        </div>)
+    }
+}
+
+export default Reviews;
