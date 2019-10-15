@@ -1,0 +1,14 @@
+.imgBar {
+    display: inline-block;
+}
+.Bizmage {
+    display: inline;
+    margin: 0;
+    max-width: 16vw;
+    max-height: 16vw;
+}
+.responsive-img {
+    margin: 0;
+    height: 16.5vw;
+    width: 16.46vw;
+}
