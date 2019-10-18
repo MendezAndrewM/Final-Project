@@ -14,6 +14,8 @@ import API from "../src/utils/API"
 // const [ratings, rate] = useState(0);
 // const [Seeds] = useState(Seeds);
 
+// loadBusinesses = () =>
+
 
 
 function App() {
