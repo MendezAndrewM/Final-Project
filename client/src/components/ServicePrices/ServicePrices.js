@@ -11,10 +11,10 @@ const ServicePrices = props => {
                 <h3>Services</h3>
                 {props.services.map(item =>
                     <div className="specificService">
-                        <Row className="shrinkThis">
-                            <h6 className="col s6 m9 shrinkThis">{item.service}</h6>
-                            <div className="priceBox col s4 m3 shrinkThis">
-                                <p className="col s12 m6 right-align shrinkThis">${item.price}</p>
+                        <Row className="">
+                            <h6 className="col s6 m9 ">{item.service}</h6>
+                            <div className="priceBox col s4 m3 right-align">
+                                <h6 className="col s12 right-align">${item.price}</h6>
                                 {/* Compare Price to competitors (After MVP) */}
                                 {/* <p className="col s12 m6">%{item.priceCompare}</p> */}
                             </div>
