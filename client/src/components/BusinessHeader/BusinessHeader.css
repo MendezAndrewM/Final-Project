@@ -1,0 +1,27 @@
+.material-icons.biz {
+    color: rgb(255, 226, 65);;
+    text-shadow: 1px 1px 1px black;
+}
+
+button.BizBtn.col.s8.m7.l5.xl4.offset-s2.offset-m0 {
+    background-color: rgb(53, 86, 110);
+    color: white;
+    padding: 1rem;
+    border-radius: .75rem;
+}
+button.BizBtn.col.s8.m7.l5.xl4.offset-s2.offset-m0:hover {
+    cursor: pointer;
+    background-color: rgb(147, 191, 223);
+    color: rgb(37, 46, 56);
+    /* font-weight: bold; */
+}
+@media only screen and (max-width: 600px) {
+    button.BizBtn.col.s8.m7.l5.xl4.offset-s2.offset-m0 {
+        margin-top: 1rem;
+    }
+}
+
+.paraBox {
+    height:30vh;
+    background-color:white;
+}
