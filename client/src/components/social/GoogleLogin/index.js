@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import "./style.css"
 
 //Assets
-import google from './google.png'
 
 import config from '../config';
 
@@ -71,7 +71,8 @@ class GoogleLogin extends Component{
     
     render(){
         return(
-            <img src={google} title="google login" alt="google" onClick={ () => this.googleLogin() }/>
+            <span title="google login" alt="google" onClick={ () => this.googleLogin() }>
+                login</span>
         )
     }
 }

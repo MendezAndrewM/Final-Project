@@ -1,4 +1,4 @@
-.imgBar {
+/* .imgBar {
     display: inline-block;
 }
 .Bizmage {
@@ -12,3 +12,24 @@
     height: 16.5vw;
     width: 16.46vw;
 }
+
+.parallax-container {
+    height: 31vh;
+}
+
+.parallax {
+    height: 31vh;
+} */
+
+body, html {
+    height: 100%;
+  }
+.parallax {
+    /* Full height */
+    height: 100%; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

@@ -1,12 +1,9 @@
 import React, { Component } from "react";
 // import API from "../utils/API";
 // import { Link } from "react-router-dom";
-import Nav from "../components/Nav";
-import Footer from "../components/Footer";
 import Jumbotron from "../components/Jumbotron";
 import Result from "../components/Results"
-import { Row, Col } from "react-materialize";
-import SearchBar from "../components/SearchBar";
+import { Row } from "react-materialize";
 
 
 // Lines 11-31 only exist to generate placeholder Results
