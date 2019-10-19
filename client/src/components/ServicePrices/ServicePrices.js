@@ -13,7 +13,7 @@ const ServicePrices = props => {
                     <div className="specificService">
                         <Row className="">
                             <h6 className="col s6 m9 ">{item.service}</h6>
-                            <div className="priceBox col s4 m3 right-align">
+                            <div className="priceBox col s6 m3 right-align">
                                 <h6 className="col s12 right-align">${item.price}</h6>
                                 {/* Compare Price to competitors (After MVP) */}
                                 {/* <p className="col s12 m6">%{item.priceCompare}</p> */}
