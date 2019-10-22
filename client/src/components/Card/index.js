@@ -1,9 +1,12 @@
 import React from "react";
 import { Row, Col } from "react-materialize";
 import "./style.css";
+import {useParams} from "react-router-dom";
+
 
 
 const Card = (props) => {
+    
     return (
         <Row className="resizer">
             <Col s={10} offset="s1" className="card-box">
@@ -29,6 +32,9 @@ const Card = (props) => {
                                 <li className="review-list">{props.reviews}</li>
                             </ul>
                         </Col>
+                    </Row>
+                    <Row>
+                        <button className="load-more">Load More</button>
                     </Row>
                 </div>
             </Col>

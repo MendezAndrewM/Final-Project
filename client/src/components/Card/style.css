@@ -6,7 +6,7 @@
     border: 1px outset #326077;
     border-bottom-left-radius: 25px;  
     border-top-right-radius: 25px;
-    box-shadow: 5px 10px #326077;
+    box-shadow: 5px 10px #5E96B1;
         
 }
 .picture{
@@ -42,5 +42,15 @@ img {
     border-bottom-left-radius: 25px;
     margin: 25px;
 }
-
+.load-more{
+    float: right;
+    margin-right: 20px;
+    background-color:#5E96B1;
+    border: none;
+    color: white;
+    height: 50px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    
+}
 

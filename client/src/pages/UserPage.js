@@ -1,12 +1,17 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import { Row, Col } from "react-materialize";
+import {useParams} from "react-router-dom";
 
 import Card from "../components/Card";
 
 
 const properinos = {
-    name: "Jake Hanes",
-    image: "https://dw8stlw9qt0iz.cloudfront.net/CfRlDncfJl_fzKm0Qi9BB5ySOhQ=/fit-in/800x450/filters:format(jpeg):quality(75)/curiosity-data.s3.amazonaws.com/images/content/landscape/standard/8d6472ac-5757-497c-dabf-d497522d21d2.png",
+    name: {
+        firstName: "Jake",
+        lastName: "hanes",
+
+        },
+    image: "https://gamepedia.cursecdn.com/dota2_gamepedia/d/d6/Lycan_icon.png",
     
     reviews: [
         {
@@ -30,11 +35,23 @@ const properinos = {
     ]
 
 };
+
+const displayStars = num => {
+    if (num < 0.3) { return "star_half" }  //Sets minimum rating as half_star
+    else {
+        const whole = Math.floor(num);
+        const dec = (num - Math.floor(num));
+        let stars = "";
+        for (let i = 0; i < whole; i++) { stars += "star " };
+        if (dec > 0.3) { stars += "star_half" };
+        return stars;
+    }
+}
 const coms = properinos.reviews.map((review)=>
     <li>
         <div>
             <h1>{review.location}</h1>
-           <strong><p>{review.rating}</p></strong> 
+           <strong><p className="material-icons rating">{displayStars(review.rating)}</p></strong> 
         </div>
         
         <div>
@@ -46,27 +63,27 @@ const coms = properinos.reviews.map((review)=>
     </li>
 )
 
-class UserPage extends Component {
-
+const UserPage = (props) => {
+    const [useUser, grabUser] = useState(1);
+    const {name} = useParams()
+    
+    
+    
     // need to control the userpage through state.
-render() {
-
-    return (
+    return(
+    
         <div>
             
             <Card
-            name={properinos.name}
+            name={name}
             src={properinos.image}
             alt={properinos.name}
             reviews={coms}
+            
             />
             
         </div>
     )
-    
-    
-}
-    
     
 }
 

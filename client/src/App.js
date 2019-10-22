@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import ReactDOM from 'react-dom'
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home"
 import Nav from "./components/Nav/index";
 import Footer from "./components/Footer/index";
@@ -10,11 +11,7 @@ import UserPage from "./pages/UserPage";
 // import Seeds from "../../scripts/seedsDB"
 import API from "../src/utils/API"
 
-// const [loggedin, login] = useState(false);
-// const [ratings, rate] = useState(0);
-// const [Seeds] = useState(Seeds);
 
-// loadBusinesses = () =>
 
 
 
@@ -23,9 +20,11 @@ function App() {
     <Router>
       <div>
       <Nav />
+      <Switch>
       <Route exact path="/" component={Home} />
-      <Route exact path="/profile" component={UserPage} />
+      <Route exact path="/profile/:name" component={UserPage} />
       <Route exact path="/thisspecificbusiness" component={BusinessPage} />
+      </Switch>
       <Footer />
       </div>
     </Router>

@@ -12,19 +12,77 @@ const userSeed = [
         id: 1,
         name: "Lycan",
         imageURL: "https://gamepedia.cursecdn.com/dota2_gamepedia/thumb/f/fe/Cosmetic_icon_Mark_of_the_Blood_Moon.png/200px-Cosmetic_icon_Mark_of_the_Blood_Moon.png?version=2bce134eb0d67be1a26bbb15d3b1c826",
-        comments: ["RAWR", "Wolves need no armor", "A wolf in man's clothing."]
+        reviews: [
+          {
+            location: "secret shop",
+            rating: 5,
+            comment: "RAWR",
+            date: "01-05-1993"
+
+          },
+          {
+            location: "secret shop",
+            rating: 5,
+            comment: "RAWR",
+            date: "01-05-1993"
+          },
+          {
+            location: "secret shop",
+            rating: 5,
+            comment: "RAWR",
+            date: "01-05-1993"
+          }
+        ]
     },
     {
         id: 2,
         name: "Lina",
         imageURL: "http://1.bp.blogspot.com/-VWNJJHCbj5o/UC8CasU4_xI/AAAAAAAAAfw/w1fpppIGKho/s400/dota2_lina.jpg",
-        comments: ["HOT", "Put another one on the fire", "i dont know i just need a string"]
+        reviews: [
+          {
+            location:"Secret shop",
+            rating: 4,
+            comment: "hot",
+            date: "09-19-2019"
+          },
+          {
+            location:"secret shop",
+            rating: 4,
+            comment: "hot",
+            date: "09-19-2019"
+          },
+          {
+            location:"secret shop",
+            rating: 4,
+            comment: "hot",
+            date: "09-19-2019"
+          },
+        ]
     },
     {
         id: 3,
         name: "Pudge",
         imageURL: "https://steamcdn-a.akamaihd.net/apps/570/icons/econ/items/pudge/arcana/pudge_arcana_back_large.1d6857a5b278ba1a3e5381b76344fcf206052983.png",
-        comments: ["Chop Chop", "About bloody time!", "Hooked 'em!"]
+        reviews: [
+          {
+            location:"secret shop",
+            rating: 4,
+            comment: "chop chop",
+            date: "09-30-2019"
+          },
+          {
+            location:"secret shop",
+            rating: 4,
+            comment: "chop chop",
+            date: "09-30-2019"
+          },
+          {
+            location:"secret shop",
+            rating: 4,
+            comment: "chop chop",
+            date: "09-30-2019"
+          },
+        ]
     },
 ];
 
