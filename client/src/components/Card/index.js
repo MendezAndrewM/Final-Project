@@ -14,7 +14,7 @@ const Card = (props) => {
                     <Row>
     
                     <Row>
-                        <h1 className="prof-name">{props.name}</h1>
+                        <h1 className="prof-name">{props.id}</h1>
                     </Row>
                         <Col s={6}>
                             <img className="responsive-img picture" src={props.src} alt={props.name}/>

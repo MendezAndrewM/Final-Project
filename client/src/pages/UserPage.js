@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { Row, Col } from "react-materialize";
-import {useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
+import API from "../utils/API";
 
 import Card from "../components/Card";
 
-
+// -----------------------on hold-----------------------//
 const properinos = {
     name: {
         firstName: "Jake",
         lastName: "hanes",
 
-        },
+    },
     image: "https://gamepedia.cursecdn.com/dota2_gamepedia/d/d6/Lycan_icon.png",
-    
+
     reviews: [
         {
             location: "Wal-Mart",
@@ -47,15 +48,15 @@ const displayStars = num => {
         return stars;
     }
 }
-const coms = properinos.reviews.map((review)=>
+const coms = properinos.reviews.map((review) =>
     <li>
         <div>
             <h1>{review.location}</h1>
-           <strong><p className="material-icons rating">{displayStars(review.rating)}</p></strong> 
+            <strong><p className="material-icons rating">{displayStars(review.rating)}</p></strong>
         </div>
-        
+
         <div>
-            
+
             <p><strong>Comments:</strong> {review.comment}</p>
             <p><strong>Date: </strong>{review.date}</p>
         </div>
@@ -63,34 +64,41 @@ const coms = properinos.reviews.map((review)=>
     </li>
 )
 
+
 const UserPage = (props) => {
-    const [useUser, grabUser] = useState(1);
-    const {name} = useParams()
+    const {id} = useParams()
     
-    
-    
+   const loadUser = () => {
+        API.getUser()
+          .then(res => console.log({ user: res.data }))
+          .catch(err => console.log(err));
+      };
+
+
+
+
     // need to control the userpage through state.
-    return(
-    
+    return (
+
         <div>
-            
+
             <Card
-            name={name}
-            src={properinos.image}
-            alt={properinos.name}
-            reviews={coms}
-            
+                id={id}
+                src={properinos.image}
+                alt={properinos.name}
+                reviews={coms}
+
             />
-            
+
         </div>
     )
-    
+
 }
 
 
-                
 
-                
-            
+
+
+
 
 export default UserPage;
