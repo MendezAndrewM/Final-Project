@@ -6,7 +6,9 @@ import { useParams } from "react-router-dom";
 const Card = (props) => {
 
   return (
-    <Row className="resizer">
+    <div>
+
+    <Row>
       <Col s={10} offset="s1" className="card-box">
         <div>
           <Row>
@@ -51,6 +53,7 @@ const Card = (props) => {
         </p>
       </Col>
     </Row>
+    </div>
         
         
   );
