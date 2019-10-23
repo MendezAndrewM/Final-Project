@@ -1,28 +1,87 @@
 import React, { Component } from "react";
 import { Row, Col } from "react-materialize";
-import Reviews from "./Reviews/Reviews.js";
-import "./style.css";
+// import Reviews from "./Reviews/Reviews.js";
+import "./style.css"
 
 class ReviewForm extends Component {
   render() {
     return (
-      <div class="row">
-        <form class="col s8">
-          <div class="row">
-            <div class="input-field col s8">
-              <textarea id="textarea1" class="materialize-textarea"></textarea>
-              <label for="textarea1">Leave a Review</label>
-            </div>
-          </div>
-          <button
-            class="btn waves-effect waves-light"
-            type="submit"
-            name="action"
-          >
-            Submit
-          </button>
-        </form>
-      </div>
+      <Row>
+        <Col s={12}>
+          <Row>
+            <Col s={6} className="input-field">
+              <textarea id="textarea1" className="materialize-textarea" data-length="120"></textarea>
+              <label for="textarea1">Comment</label>
+            </Col>
+          </Row>
+          <Row>
+            <Col s={6} className="input-field">
+              <textarea id="textarea2" className="materialize-textarea" data-length="120"></textarea>
+              <label for="textarea2">Service Provided</label>
+            </Col>
+          </Row>
+          <Row>
+            <Col s={6} className="input-field">
+              <textarea id="textarea2" className="materialize-textarea" data-length="120"></textarea>
+              <label for="textarea2">What did you pay</label>
+            </Col>
+          </Row>
+          <Row className="wrapper">
+            <Col s={1}>
+              
+              <div>
+                <label>
+                  <input className="with-gap" value="0" name="group3" type="radio"/>
+                  <span>0</span>
+                </label>
+              </div>
+            </Col>  
+            <Col s={1}>
+              <div>
+                <label>
+                  <input className="with-gap" value="1" name="group3" type="radio"/>
+                  <span>1</span>
+                </label>
+              </div>
+            </Col>
+            <Col s={1}>
+              <div>
+                <label>
+                  <input className="with-gap" value="2" name="group3" type="radio"/>
+                  <span>2</span>
+                </label>
+              </div>
+            </Col>
+            <Col s={1}>
+              <div>
+                <label>
+                  <input className="with-gap" value="3" name="group3" type="radio"/>
+                  <span>3</span>
+                </label>
+              </div>
+            </Col>
+            <Col s={1}>
+
+              <div>
+                <label>
+                  <input className="with-gap" value="4" name="group3" type="radio"/>
+                  <span>4</span>
+                </label>
+              </div>
+            </Col>
+            <Col s={1}>
+
+              <div>
+                <label>
+                  <input className="with-gap" value="5" name="group3" type="radio"/>
+                  <span>5</span>
+                </label>
+              </div>
+            </Col>
+            
+          </Row>
+        </Col>
+      </Row>
     );
   }
 }
