@@ -13,7 +13,7 @@ const businessSchema = new Schema({
   // avgRating: 
   //Average prices for similar services at competitors
    // priceCompare: todo
-  average: {type: Number, required: true}, 
+  
   // Phone number in a (###) - ### - #### format
   phone: { type: String, required: true },
   // Company website
@@ -25,7 +25,7 @@ const businessSchema = new Schema({
   // Description of business
   description: { type: String, required: true },
   // Comments associated with specfic business
-  comments: [{ type: Schema.Types.ObjectId, ref: 'Comment' }],
+  comments: [{ body: String, date: Date, rating: Number }],
   // date: { type: Date, default: Date.now }
 });
 

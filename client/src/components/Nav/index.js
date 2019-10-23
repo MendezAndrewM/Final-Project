@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Link } from "react-router-dom";
 import { Navbar, NavItem } from 'react-materialize'
 import Social from '../social/index.js'
@@ -21,9 +22,9 @@ const Nav = () => {
         </Link>
       </NavItem>
 
-      <NavItem href="/profile">
+      <NavItem>
         <Link
-          to="/profile"
+          to="/profile/0"
           className={window.location.pathname === "/profile" 
           ? "nav-link active" 
           : "nav-link"}>
@@ -40,12 +41,19 @@ const Nav = () => {
         </Link>
       </NavItem>
       
-      <NavItem href="components.html">
-        About
+      <NavItem href="/about">
+      <Link to="/about"
+          className={window.location.pathname === "/about" 
+          ? "nav-link active" 
+          : "nav-link"}>
+          About
+        </Link>
         </NavItem>
 
-         <NavItem href="google.js">
+         <NavItem href="/google.js">
+           <Link>
         <Social />
+           </Link>
         </NavItem>
 
     </Navbar>

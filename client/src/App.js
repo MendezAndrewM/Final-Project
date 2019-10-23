@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home"
 import Nav from "./components/Nav/index";
 import Footer from "./components/Footer/index";
@@ -7,9 +8,9 @@ import BusinessPage from "./pages/BusinessPage"
 import UserPage from "./pages/UserPage";
 import API from "../src/utils/API"
 
-// const [loggedin, login] = useState(false);
-// const [ratings, rate] = useState(0);
-// const [Seeds] = useState(Seeds);
+
+
+
 
 
 
@@ -18,9 +19,12 @@ function App() {
     <Router>
       <div>
       <Nav />
+      <Switch>
       <Route exact path="/" component={Home} />
-      <Route exact path="/profile" component={UserPage} />
+      <Route exact path="/profile/:0" component={UserPage} />
       <Route exact path="/thisspecificbusiness" component={BusinessPage} />
+      
+      </Switch>
       <Footer />
       </div>
     </Router>
