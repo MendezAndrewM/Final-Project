@@ -6,6 +6,7 @@ import Nav from "./components/Nav/index";
 import Footer from "./components/Footer/index";
 import BusinessPage from "./pages/BusinessPage"
 import UserPage from "./pages/UserPage";
+import ReviewFrom from "./components/ReviewForm/index"
 import API from "../src/utils/API"
 
 
@@ -21,7 +22,7 @@ function App() {
       <Nav />
       <Switch>
       <Route exact path="/" component={Home} />
-      <Route exact path="/profile/:0" component={UserPage} />
+      <Route exact path="/profile/:0" component={ReviewFrom} />
       <Route exact path="/thisspecificbusiness" component={BusinessPage} />
       
       </Switch>
