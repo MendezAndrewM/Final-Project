@@ -2,6 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 import { Navbar, NavItem } from 'react-materialize'
+import Social from '../social/index.js'
 import "./style.css"
 // import "./Nav.sass"
 
@@ -42,6 +43,10 @@ const Nav = () => {
       
       <NavItem href="components.html">
         About
+        </NavItem>
+
+         <NavItem href="google.js">
+        <Social />
         </NavItem>
 
     </Navbar>
