@@ -24,6 +24,7 @@ class GoogleLogin extends Component{
     //Triggering login for google
     googleLogin = () => {
         let response = null;
+        
         window.gapi.auth.signIn({
             callback: function(authResponse) {
                 this.googleSignInCallback( authResponse )
@@ -33,6 +34,7 @@ class GoogleLogin extends Component{
             requestvisibleactions: "http://schema.org/AddAction",
             scope: "https://www.googleapis.com/auth/plus.login email"
         });
+        
     }
     
     googleSignInCallback = (e) => {
@@ -71,8 +73,9 @@ class GoogleLogin extends Component{
     
     render(){
         return(
-            <span title="google login" alt="google" onClick={ () => this.googleLogin() }>
+            <span title="google login" alt="google" onClick={ () => this.googleLogin()}>
                 login</span>
+                
         )
     }
 }

@@ -41,12 +41,19 @@ const Nav = () => {
         </Link>
       </NavItem>
       
-      <NavItem href="components.html">
-        About
+      <NavItem href="/about">
+      <Link to="/about"
+          className={window.location.pathname === "/about" 
+          ? "nav-link active" 
+          : "nav-link"}>
+          About
+        </Link>
         </NavItem>
 
-         <NavItem href="google.js">
+         <NavItem href="/google.js">
+           <Link>
         <Social />
+           </Link>
         </NavItem>
 
     </Navbar>
