@@ -3,8 +3,6 @@ import { Row, Col } from "react-materialize";
 import "./style.css";
 import {useParams} from "react-router-dom";
 
-
-
 const Card = (props) => {
     
     return (
@@ -37,12 +35,26 @@ const Card = (props) => {
                         <button className="load-more">Load More</button>
                     </Row>
                 </div>
+
             </Col>
-        </Row>
-
-
-    )
+            <Col s={6}>
+              <h1 className="prof-name">{props.name}</h1>
+            </Col>
+          </Row>
+          <Row>
+            <Col s={12}>
+              <p>
+                <strong>Name:</strong> {props.name}
+              </p>
+              <p>
+                <strong>Comments:</strong> {props.comments}
+              </p>
+            </Col>
+          </Row>
+        </div>
+      </Col>
+    </Row>
+  );
 };
-
 
 export default Card;
