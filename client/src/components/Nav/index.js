@@ -24,7 +24,7 @@ const Nav = () => {
 
       <NavItem>
         <Link
-          to="/profile/0"
+          to="/profile"
           className={window.location.pathname === "/profile" 
           ? "nav-link active" 
           : "nav-link"}>

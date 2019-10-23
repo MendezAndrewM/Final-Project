@@ -1,0 +1,12 @@
+.bigWrap {
+    margin:20px;
+    height: auto;
+    border: 1px outset #326077;
+    align-content: center;
+    border-radius: 2px;
+}
+
+button {
+    background-color: #326077 !important;
+    margin-left: 30px;
+}
