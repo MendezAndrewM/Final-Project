@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Row } from "react-materialize";
-import "./BusinessHeader.css"
+import "./BusinessHeader.css";
+
 
 // Props used: 
     // img1

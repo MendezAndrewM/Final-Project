@@ -4,6 +4,7 @@ import ServicePrices from "../components/ServicePrices";
 import Reviews from "../components/Reviews";
 import BusinessHeader from "../components/BusinessHeader";
 import getBusiness from "../utils/API";
+// import displayStars from "../utils/utils";
 
 
 class BusinessPage extends Component {
@@ -96,7 +97,7 @@ class BusinessPage extends Component {
             return stars;
         }
     }
-
+    
 
 
     render() {

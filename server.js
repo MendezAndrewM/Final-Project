@@ -16,7 +16,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // mongoose.connect("mongodb://localhost/finalproject");
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/finalproject");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/finalProject");
 
 // Connect to the Mongo DB when it is set up
 
