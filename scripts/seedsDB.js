@@ -143,7 +143,7 @@ const businessSeed = [
 
 db.businessSchema
   .remove({})
-  .then(() => db.businessSchema.collection.insertMany(userSeed))
+  .then(() => db.businessSchema.collection.insertMany(businessSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
