@@ -12,77 +12,77 @@ const userSeed = [
     id: 1,
     name: "Lycan",
     imageURL: "https://gamepedia.cursecdn.com/dota2_gamepedia/thumb/f/fe/Cosmetic_icon_Mark_of_the_Blood_Moon.png/200px-Cosmetic_icon_Mark_of_the_Blood_Moon.png?version=2bce134eb0d67be1a26bbb15d3b1c826",
-    reviews: [
-      {
-        location: "secret shop",
-        rating: 5,
-        comment: "RAWR",
-        date: "01-05-1993"
+    // reviews: [
+    //   {
+    //     location: "secret shop",
+    //     rating: 5,
+    //     comment: "RAWR",
+    //     date: "01-05-1993"
 
-      },
-      {
-        location: "secret shop",
-        rating: 5,
-        comment: "RAWR",
-        date: "01-05-1993"
-      },
-      {
-        location: "secret shop",
-        rating: 5,
-        comment: "RAWR",
-        date: "01-05-1993"
-      }
-    ]
+    //   },
+    //   {
+    //     location: "secret shop",
+    //     rating: 5,
+    //     comment: "RAWR",
+    //     date: "01-05-1993"
+    //   },
+    //   {
+    //     location: "secret shop",
+    //     rating: 5,
+    //     comment: "RAWR",
+    //     date: "01-05-1993"
+    //   }
+    // ]
   },
   {
     id: 2,
     name: "Lina",
     imageURL: "http://1.bp.blogspot.com/-VWNJJHCbj5o/UC8CasU4_xI/AAAAAAAAAfw/w1fpppIGKho/s400/dota2_lina.jpg",
-    reviews: [
-      {
-        location: "Secret shop",
-        rating: 4,
-        comment: "hot",
-        date: "09-19-2019"
-      },
-      {
-        location: "secret shop",
-        rating: 4,
-        comment: "hot",
-        date: "09-19-2019"
-      },
-      {
-        location: "secret shop",
-        rating: 4,
-        comment: "hot",
-        date: "09-19-2019"
-      },
-    ]
+    // reviews: [
+    //   {
+    //     location: "Secret shop",
+    //     rating: 4,
+    //     comment: "hot",
+    //     date: "09-19-2019"
+    //   },
+    //   {
+    //     location: "secret shop",
+    //     rating: 4,
+    //     comment: "hot",
+    //     date: "09-19-2019"
+    //   },
+    //   {
+    //     location: "secret shop",
+    //     rating: 4,
+    //     comment: "hot",
+    //     date: "09-19-2019"
+    //   },
+    // ]
   },
   {
     id: 3,
     name: "Pudge",
     imageURL: "https://steamcdn-a.akamaihd.net/apps/570/icons/econ/items/pudge/arcana/pudge_arcana_back_large.1d6857a5b278ba1a3e5381b76344fcf206052983.png",
-    reviews: [
-      {
-        location: "secret shop",
-        rating: 4,
-        comment: "chop chop",
-        date: "09-30-2019"
-      },
-      {
-        location: "secret shop",
-        rating: 4,
-        comment: "chop chop",
-        date: "09-30-2019"
-      },
-      {
-        location: "secret shop",
-        rating: 4,
-        comment: "chop chop",
-        date: "09-30-2019"
-      },
-    ]
+    // reviews: [
+    //   {
+    //     location: "secret shop",
+    //     rating: 4,
+    //     comment: "chop chop",
+    //     date: "09-30-2019"
+    //   },
+    //   {
+    //     location: "secret shop",
+    //     rating: 4,
+    //     comment: "chop chop",
+    //     date: "09-30-2019"
+    //   },
+    //   {
+    //     location: "secret shop",
+    //     rating: 4,
+    //     comment: "chop chop",
+    //     date: "09-30-2019"
+    //   },
+    // ]
   },
 ];
 
@@ -107,7 +107,7 @@ const businessSeed = [
     id: 1,
     name: "Wal-mart",
     imageURL: "https://www.google.com/maps/uv?hl=en&pb=!1s0x872baf2236b8cc33%3A0x10495f383901c67f!2m22!2m2!1i80!2i80!3m1!2i20!16m16!1b1!2m2!1m1!1e1!2m2!1m1!1e3!2m2!1m1!1e5!2m2!1m1!1e4!2m2!1m1!1e6!3m1!7e115!4shttps%3A%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNXn9EDKEodpOAgMaWduBG5fHh167zwmzOgq2eP%3Dw350-h236-n-k-no!5swalmart%20-%20Google%20Search!15sCAQ&imagekey=!1e10!2sAF1QipNXn9EDKEodpOAgMaWduBG5fHh167zwmzOgq2eP",
-    average: 5,
+    // average: 5,
     phone: "480-892-3814",
     url: "https://www.walmart.com/store/5428/mesa-az/details",
     adress: "1710 S Greenfield Rd, Mesa, AZ 85206",
@@ -119,7 +119,7 @@ const businessSeed = [
     id: 2,
     name: "Ase Auto Tech",
     imageURL: "https://lh5.googleusercontent.com/p/AF1QipPxvyEnTtRPV_sKYRp6DbIT01xTvPWE8rdXBUYJ=w121-h121-n-k-no",
-    average: 5,
+    // average: 5,
     phone: "(480) 984-5259",
     url: "na",
     adress: "10001 E Main St, Mesa, AZ 85207",
@@ -131,7 +131,7 @@ const businessSeed = [
     id: 3,
     name: "Mesa Auto Works",
     imageURL: "https://www.google.com/maps/uv?hl=en&pb=!1s0x872ba586da5c9699:0xffc1f4eb6161b00f!2m22!2m2!1i80!2i80!3m1!2i20!16m16!1b1!2m2!1m1!1e1!2m2!1m1!1e3!2m2!1m1!1e5!2m2!1m1!1e4!2m2!1m1!1e6!3m1!7e115!4shttps://lh5.googleusercontent.com/p/AF1QipMoY94ok94PdgejSU7xHCHxlpbNQvEq0S-MQgTS%3Dw175-h117-n-k-no!5sauto+repair+near+me+-+Google+Search&imagekey=!1e10!2sAF1QipMoY94ok94PdgejSU7xHCHxlpbNQvEq0S-MQgTS",
-    average: 5,
+    // average: 5,
     phone: "(480) 969-1954",
     url: "https://mesaautoworks.com/",
     adress: "1636 N Banning, Mesa, AZ 85205",
