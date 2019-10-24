@@ -1,35 +1,37 @@
-import React, { useState } from 'react';
-
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React, { useState, Component } from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./pages/Home"
 import Nav from "./components/Nav/index";
 import Footer from "./components/Footer/index";
 import BusinessPage from "./pages/BusinessPage"
 import UserPage from "./pages/UserPage";
-import FormPage from "./pages/formPage"
-import API from "../src/utils/API"
+import About from "./pages/About"
+import FormPage from "./pages/formPage";
+import API from "../src/utils/API";
 
 
+class App extends Component {
 
+  constructor(props) {
+    super(props)
+    this.state = { isSignedIn: false }
+  }
 
-
-
-
-function App() {
-  return (
-    <Router>
-      <div>
-      <Nav />
-      <Switch>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/profile/" component={FormPage} />
-      <Route exact path="/thisspecificbusiness" component={BusinessPage} />
-      
-      </Switch>
-      <Footer />
-      </div>
-    </Router>
-  );
+  render() {
+    return (
+      <Router>
+        <div>
+          <Nav loggedIn={this.state.isSignedIn} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/profile" component={UserPage} />
+          <Route exact path="/business/:businessid" component={BusinessPage} />
+          <Route exact path="/About" component={About} />
+          <Route exact path="/business/:businessid/review" component={FormPage}/>
+          <Footer />
+        </div>
+      </Router>
+    )
+  }
 }
 
 

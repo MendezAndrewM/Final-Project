@@ -1,6 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 import { Row } from "react-materialize";
-import "./BusinessHeader.css"
+import "./BusinessHeader.css";
+
 
 // Props used: 
     // img1
@@ -40,14 +41,16 @@ const BusinessHeader = props => <>
                     </h1>
                     <p>Price Diff Compared to others</p>
                 </div>
-                <button className="BizBtn col s8 m7 l5 xl4
-                    offset-s2 offset-m0">Submit Review
-                </button>
+                <a target="none" href="/business/:business/review">
+                    <button className="BizBtn col s8 m7 l5 xl4 offset-s2 offset-m0">
+                        Submit Review
+                    </button>
+                </a>
             </Row>
         </div>
     </Row>
 
-</>;
+</>
 
 
 export default BusinessHeader;
