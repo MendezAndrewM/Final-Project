@@ -1,6 +1,7 @@
 import React from "react";
 import { Row } from "react-materialize";
 import "./Results.css";
+import ReviewForm from "../ReviewForm";
 
 
 const percentDiff = (x, y) => ((y - x) / x) * 100;
@@ -31,7 +32,9 @@ const Result = (props) => {
                             <a target="none" href={props.map}>{props.address}</a>
                         </div>
                         <div className="col s10 m5">
-                            <button className="col s10 offset-s2 offset-m1 center-align">Submit Review</button>
+                            <a target="none" href="/business/:business/review">
+                                <button className="col s10 offset-s2 offset-m1 center-align">Submit Review</button>
+                            </a>
                         </div>
                     </Row>
                     <Row>
