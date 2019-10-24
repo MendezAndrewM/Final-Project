@@ -6,12 +6,8 @@ import Footer from "./components/Footer/index";
 import BusinessPage from "./pages/BusinessPage"
 import UserPage from "./pages/UserPage";
 import About from "./pages/About"
-import API from "../src/utils/API"
-
-// const [loggedin, login] = useState(false);
-// const [ratings, rate] = useState(0);
-// const [Seeds] = useState(Seeds);
-
+import FormPage from "./pages/formPage";
+import API from "../src/utils/API";
 
 
 class App extends Component {
@@ -30,6 +26,7 @@ class App extends Component {
           <Route exact path="/profile" component={UserPage} />
           <Route exact path="/business/:businessid" component={BusinessPage} />
           <Route exact path="/About" component={About} />
+          <Route exact path="/business/:businessid/review" component={FormPage}/>
           <Footer />
         </div>
       </Router>

@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Link } from "react-router-dom";
 import { Navbar, NavItem } from 'react-materialize'
 import Social from '../social/index.js'
@@ -21,7 +22,7 @@ const Nav = (props) => {
         </Link>
       </NavItem>
 
-      <NavItem href="/profile">
+      <NavItem>
         <Link
           to="/profile"
           className={window.location.pathname === "/profile" 

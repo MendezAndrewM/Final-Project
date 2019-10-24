@@ -11,15 +11,7 @@ import "./BusinessHeader.css"
     // cityState
     // rating
 
-class BusinessHeader extends Component {
-
-
-    clickEvent() {
-        //toggle module?
-    }
-
-    render() {
-        return <>
+const BusinessHeader = props => <>
 
     <Row className="paraBox" >
         <div className="bizBox col s10 m6 offset-m2 offset-s1">         
@@ -48,15 +40,16 @@ class BusinessHeader extends Component {
                     </h1>
                     <p>Price Diff Compared to others</p>
                 </div>
-                <button className="BizBtn col s8 m7 l5 xl4
-                    offset-s2 offset-m0" onClick={clickEvent()}>
+                <a target="none" href="/business/:business/review">
+                    <button className="BizBtn col s8 m7 l5 xl4 offset-s2 offset-m0">
                         Submit Review
-                </button>
+                    </button>
+                </a>
             </Row>
         </div>
     </Row>
 
-</>}}
+</>
 
 
 export default BusinessHeader;

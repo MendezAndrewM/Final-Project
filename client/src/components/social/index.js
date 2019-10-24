@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 //Components
-import GoogleLogin from './GoogleLogin'
-
+import GoogleLogin from "./GoogleLogin";
 
 import config from './config';
 

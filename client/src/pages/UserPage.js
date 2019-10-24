@@ -1,43 +1,104 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import { Row, Col } from "react-materialize";
+import { useParams } from "react-router-dom";
+import API from "../utils/API";
 
 import Card from "../components/Card";
 
-
+// -----------------------on hold-----------------------//
 const properinos = {
-    name: "Jake Hanes",
-    image: "https://www.buffed.de/screenshots/430x/2019/09/Samwise-Icon-pc-games.png",
-    comments: ["omg this place is great", "wtf they ripped me off", "they dont work on teslas"],
+    name: {
+        firstName: "Jake",
+        lastName: "hanes",
+
+    },
+    image: "https://gamepedia.cursecdn.com/dota2_gamepedia/d/d6/Lycan_icon.png",
+
+    reviews: [
+        {
+            location: "Wal-Mart",
+            rating: 5,
+            comment: "omg this place is great",
+            date: "05-23-2019"
+        },
+        {
+            location: "Sam's",
+            rating: 0,
+            comment: "wtf they ripped me off",
+            date: "01-01-2018"
+        },
+        {
+            location: "Jiffy Lube",
+            rating: 5,
+            comment: "wldkmwadmwapfpamfpasmcpaomfpam",
+            date: "05-08-2019"
+        }
+    ]
 
 };
 
-class UserPage extends Component {
-    // need to control the userpage through state.
-render() {
-
-    return (
+const displayStars = num => {
+    if (num < 0.3) { return "star_half" }  //Sets minimum rating as half_star
+    else {
+        const whole = Math.floor(num);
+        const dec = (num - Math.floor(num));
+        let stars = "";
+        for (let i = 0; i < whole; i++) { stars += "star " };
+        if (dec > 0.3) { stars += "star_half" };
+        return stars;
+    }
+}
+const coms = properinos.reviews.map((review) =>
+    <li>
         <div>
-            
+            <h1>{review.location}</h1>
+            <strong><p className="material-icons rating">{displayStars(review.rating)}</p></strong>
+        </div>
+
+        <div>
+
+            <p><strong>Comments:</strong> {review.comment}</p>
+            <p><strong>Date: </strong>{review.date}</p>
+        </div>
+        <hr />
+    </li>
+)
+
+
+const UserPage = (props) => {
+    const {id} = useParams()
+    
+   const loadUser = () => {
+        API.getUser()
+          .then(res => console.log({ user: res.data }))
+          .catch(err => console.log(err));
+      };
+
+
+
+
+    // need to control the userpage through state.
+    return (
+
+        <div>
+
             <Card
-            name={properinos.name}
-            image={properinos.image}
-            alt={properinos.name}
-            comments={properinos.comments}
+                id={id}
+                src={properinos.image}
+                alt={properinos.name}
+                reviews={coms}
+
             />
-            
+
         </div>
     )
-    
-    
-}
-    
-    
+
 }
 
 
-                
 
-                
-            
+
+
+
 
 export default UserPage;

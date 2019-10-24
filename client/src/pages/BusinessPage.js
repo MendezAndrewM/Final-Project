@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ImageBar from "../components/ImageBar/Index";
 import ServicePrices from "../components/ServicePrices";
 import Reviews from "../components/Reviews";
-// import BusinessHeader from "../components/BusinessHeader";
+import BusinessHeader from "../components/BusinessHeader";
 import getBusiness from "../utils/API";
 
 
@@ -104,7 +104,7 @@ class BusinessPage extends Component {
             <>
                 <ImageBar img={this.state.Profile.images[0]} />
 
-                {/* <BusinessHeader
+                <BusinessHeader
                     img1={ this.state.Profile.images[0] }
                     img2={ this.state.Profile.images[1] }
                     header={ this.state.Profile.name }
@@ -112,7 +112,7 @@ class BusinessPage extends Component {
                     streetAddress={ this.state.Profile.streetAddress }
                     cityState={ this.state.Profile.cityStateZip }
                     rating={ this.displayStars(this.state.Profile.rating) }
-                /> */}
+                />
 
                 <ImageBar img={this.state.Profile.images[1]} />
 
