@@ -6,7 +6,7 @@ import "./style.css"
 // import "./Nav.sass"
 
 
-const Nav = () => {
+const Nav = (props) => {
 
   return (
     <Navbar className="nav-style" brand={<a>Working Title</a>} alignLinks="right">
@@ -40,13 +40,18 @@ const Nav = () => {
         </Link>
       </NavItem>
       
-      <NavItem href="components.html">
+      <NavItem href="/About">
+        <Link to="/About"
+        className={window.location.pathname === "/About" 
+        ? "nav-link active" 
+        : "nav-link"}>
         About
-        </NavItem>
+        </Link>
+      </NavItem>
 
-         <NavItem href="google.js">
-        <Social />
-        </NavItem>
+      <NavItem href="/">
+        <Social loggedIn={props.loggedIn ? "Sign Out" : "Sign In"} />
+      </NavItem>
 
     </Navbar>
   )

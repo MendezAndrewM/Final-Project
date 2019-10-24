@@ -4,6 +4,6 @@ const userRoutes = require("./user");
 
 // Book routes
 router.use("/user", userRoutes);
-router.use("/business", businessRoutes);
+router.use("/api/business", businessRoutes);
 
 module.exports = router;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { Row } from "react-materialize";
 import "./BusinessHeader.css"
 
@@ -11,7 +11,15 @@ import "./BusinessHeader.css"
     // cityState
     // rating
 
-const BusinessHeader = props => <>
+class BusinessHeader extends Component {
+
+
+    clickEvent() {
+        //toggle module?
+    }
+
+    render() {
+        return <>
 
     <Row className="paraBox" >
         <div className="bizBox col s10 m6 offset-m2 offset-s1">         
@@ -41,13 +49,14 @@ const BusinessHeader = props => <>
                     <p>Price Diff Compared to others</p>
                 </div>
                 <button className="BizBtn col s8 m7 l5 xl4
-                    offset-s2 offset-m0">Submit Review
+                    offset-s2 offset-m0" onClick={clickEvent()}>
+                        Submit Review
                 </button>
             </Row>
         </div>
     </Row>
 
-</>;
+</>}}
 
 
 export default BusinessHeader;

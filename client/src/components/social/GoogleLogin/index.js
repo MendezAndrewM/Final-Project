@@ -69,10 +69,13 @@ class GoogleLogin extends Component{
         }.bind(this));
     }
     
-    render(){
+    render() {
         return(
-            <span title="google login" alt="google" onClick={ () => this.googleLogin() }>
-                login</span>
+            <span title="google login" alt="google" onClick={ () => {
+                this.googleLogin()
+                }}>
+                {this.props.loggedIn}
+            </span>
         )
     }
 }

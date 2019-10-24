@@ -2,13 +2,15 @@ import React, { Component } from "react";
 import ImageBar from "../components/ImageBar/Index";
 import ServicePrices from "../components/ServicePrices";
 import Reviews from "../components/Reviews";
-import BusinessHeader from "../components/BusinessHeader";
+// import BusinessHeader from "../components/BusinessHeader";
+import getBusiness from "../utils/API";
 
 
 class BusinessPage extends Component {
 
     state = {
         
+
         Profile: {
             name: "Name of Business here",
             phone: "(602)555-5555",
@@ -78,6 +80,11 @@ class BusinessPage extends Component {
     // Functions to add comments / ratings / reviews
     // via API calls 
 
+    // componentDidMount() {
+    //     const { match: { params } } = this.props;
+    //     getBusiness().then 
+    // }
+
     displayStars = num => {
         if (num < 0.3) { return "star_half" }  //Sets minimum rating as half_star
         else {
@@ -97,7 +104,7 @@ class BusinessPage extends Component {
             <>
                 <ImageBar img={this.state.Profile.images[0]} />
 
-                <BusinessHeader
+                {/* <BusinessHeader
                     img1={ this.state.Profile.images[0] }
                     img2={ this.state.Profile.images[1] }
                     header={ this.state.Profile.name }
@@ -105,7 +112,7 @@ class BusinessPage extends Component {
                     streetAddress={ this.state.Profile.streetAddress }
                     cityState={ this.state.Profile.cityStateZip }
                     rating={ this.displayStars(this.state.Profile.rating) }
-                />
+                /> */}
 
                 <ImageBar img={this.state.Profile.images[1]} />
 

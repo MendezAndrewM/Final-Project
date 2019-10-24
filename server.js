@@ -11,10 +11,13 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+
 // Add routes, both API and view
 app.use(routes);
 
-mongoose.connect("mongodb://localhost/finalproject");
+// mongoose.connect("mongodb://localhost/finalproject");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/finalproject");
+
 // Connect to the Mongo DB when it is set up
 
 // Start the API server
