@@ -1,5 +1,7 @@
 import React from "react";
 import { Row } from "react-materialize";
+import "./Results.css";
+import ReviewForm from "../ReviewForm";
 
 
 const percentDiff = (x, y) => ((y - x) / x) * 100;
@@ -7,8 +9,7 @@ const percentDiff = (x, y) => ((y - x) / x) * 100;
 const Result = (props) => {
     let comp = percentDiff(Number(props.priceCompare), Number(props.average));
     return (
-        <Row>
-            <div className="ResultBox">
+        <Row className="ResultBox">
                 <img className="col s12 m4 responsive-img" src={props.image} alt={props.name} />
                 <div className="Info col s12 m8">
                     <Row>
@@ -23,15 +24,17 @@ const Result = (props) => {
                         </div>
                     </Row>
                     <Row>
-                        <div className="Contact col s12 m8">
+                        <div className="Contact col s12 m7">
                             <span>{props.phone}</span>
                             <br></br>
                             <a href={props.url} >{props.url}</a>
                             <br></br>
                             <a target="none" href={props.map}>{props.address}</a>
                         </div>
-                        <div className="col s10 m4">
-                            <button className="col s8 center-align">Submit Review</button>
+                        <div className="col s10 m5">
+                            <a target="none" href="/business/:business/review">
+                                <button className="col s10 offset-s2 offset-m1 center-align">Submit Review</button>
+                            </a>
                         </div>
                     </Row>
                     <Row>
@@ -40,7 +43,6 @@ const Result = (props) => {
                         </div>
                     </Row>
                 </div>
-            </div>
         </Row>
     )
 }

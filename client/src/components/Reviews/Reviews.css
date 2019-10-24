@@ -1,0 +1,9 @@
+.rating {
+    color: rgb(255, 226, 65);;
+    text-shadow: 1px 1px 1px black;
+}
+
+h5.col.s8, h6.col.s4.material-icons.right-align.rating,
+ h6.col.s9, h6.col.s3.right-align{
+    padding: 0;
+}

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Row } from "react-materialize";
+import "./Reviews.css";
 
 class Reviews extends Component {
 
@@ -15,7 +16,6 @@ class Reviews extends Component {
         }
     }
 
-
     render() {
         const { reviews } = this.props
 
@@ -25,12 +25,12 @@ class Reviews extends Component {
 
                     <h3>Reviews</h3>
                     {reviews.map(item =>
-                        <div className="reviewBox col s10 offset-s1">
+                        <div className="reviewBox col s12">
                             <Row>
-                                <h4 className="col s9">{item.title}</h4>
-                                <h4 className="col s3 material-icons">{this.displayStars(item.rating)}</h4>
+                                <h5 className="col s8">{item.title}</h5>
+                                <h6 className="col s4 material-icons right-align rating">{this.displayStars(item.rating)}</h6>
                                 <h6 className="col s9" >Service Provided: {item.service}</h6>
-                                <h6 className="col s3" >Price: ${item.price}</h6>
+                                <h6 className="col s3 right-align" >Price: ${item.price}</h6>
                             </Row>
                             <Row>
                                 <p>{item.content}</p>

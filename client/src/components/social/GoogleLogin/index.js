@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import "./style.css"
 
 //Assets
-import google from './google.png'
 
 import config from '../config';
 
@@ -24,6 +24,7 @@ class GoogleLogin extends Component{
     //Triggering login for google
     googleLogin = () => {
         let response = null;
+        
         window.gapi.auth.signIn({
             callback: function(authResponse) {
                 this.googleSignInCallback( authResponse )
@@ -33,6 +34,7 @@ class GoogleLogin extends Component{
             requestvisibleactions: "http://schema.org/AddAction",
             scope: "https://www.googleapis.com/auth/plus.login email"
         });
+        
     }
     
     googleSignInCallback = (e) => {
@@ -69,9 +71,13 @@ class GoogleLogin extends Component{
         }.bind(this));
     }
     
-    render(){
+    render() {
         return(
-            <img src={google} title="google login" alt="google" onClick={ () => this.googleLogin() }/>
+            <span title="google login" alt="google" onClick={ () => {
+                this.googleLogin()
+                }}>
+                {this.props.loggedIn}
+            </span>
         )
     }
 }
