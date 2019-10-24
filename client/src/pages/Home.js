@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Row } from "react-materialize";
-// import API from "../utils/API";
+import API from "../utils/API";
 // import { Link } from "react-router-dom";
 import Jumbotron from "../components/Jumbotron";
 import Result from "../components/Results";
@@ -32,18 +32,23 @@ for (let i = 0; i < 10; i++) {
 class Home extends Component {
     state = {
         loggedIn: true,
+        businesses:[]
     }
 
-    // componentDidMount() {
-    //     reRenderThingsHereIThink();
-    // }
+    componentDidMount() {
+        this.loadbusinesses()
+    }
 
     /*
         ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
                             API Calls will go Here
         ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
     */
-
+   loadbusinesses = () => {
+    API.getBusinesses()
+      .then(res => this.setState({ businesses: res.data }))
+      .catch(err => console.log(err));
+  };
 
 
     render() {
