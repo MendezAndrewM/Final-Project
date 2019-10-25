@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const db = require("../models/business");
+const db = require("../models/");
 
 mongoose.connect(
   process.env.MONGODB_URI ||
@@ -153,4 +153,4 @@ db.Business
     process.exit(1);
   });
 
-// business shit end  
+// business shit end
