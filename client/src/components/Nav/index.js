@@ -50,7 +50,7 @@ const Nav = (props) => {
         </Link>
       </NavItem>
 
-      <NavItem href="/">
+      <NavItem href="/google.js">
         <Social loggedIn={props.loggedIn ? "Sign Out" : "Sign In"} />
       </NavItem>
 
