@@ -25,7 +25,7 @@ const businessSchema = new Schema({
   // Description of business
   description: { type: String, required: true },
   // Comments associated with specfic business
-  comments: [{ body: String, date: Date, rating: Number }],
+  comments: { type: Array },
   // date: { type: Date, default: Date.now }
 });
 
