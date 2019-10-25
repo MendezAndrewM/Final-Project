@@ -10,7 +10,7 @@ const businessSchema = new Schema({
   // Image of business, stored in a string
   imageURL: { type: String, required: true },
   // Average user rating out of 5
-  // avgRating: 
+  avgRating: {type: Number},
   //Average prices for similar services at competitors
    // priceCompare: todo
   
@@ -20,6 +20,7 @@ const businessSchema = new Schema({
   url: String,
   // Address of business
   address: {
+    full: String,
     street: String,
     citystate: String,
     zipcode: String
