@@ -1,4 +1,4 @@
-const db = require("../models/business");
+const db = require("../models/");
 
 module.exports = {
   // business shit
