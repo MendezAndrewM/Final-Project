@@ -107,10 +107,11 @@ const businessSeed = [
     id: 1,
     name: "Wal-mart",
     imageURL: "https://www.google.com/maps/uv?hl=en&pb=!1s0x872baf2236b8cc33%3A0x10495f383901c67f!2m22!2m2!1i80!2i80!3m1!2i20!16m16!1b1!2m2!1m1!1e1!2m2!1m1!1e3!2m2!1m1!1e5!2m2!1m1!1e4!2m2!1m1!1e6!3m1!7e115!4shttps%3A%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNXn9EDKEodpOAgMaWduBG5fHh167zwmzOgq2eP%3Dw350-h236-n-k-no!5swalmart%20-%20Google%20Search!15sCAQ&imagekey=!1e10!2sAF1QipNXn9EDKEodpOAgMaWduBG5fHh167zwmzOgq2eP",
-    // average: 5,
+    avgRating: 3,
     phone: "480-892-3814",
     url: "https://www.walmart.com/store/5428/mesa-az/details",
     address: {
+      full: "1710 S Greenfield Rd Mesa, Az 85206",
       street: "1710 S Greenfield Rd",
       cityState: "Mesa, Az",
       zipcode:"85206"
@@ -130,12 +131,13 @@ const businessSeed = [
     id: 2,
     name: "Ase Auto Tech",
     imageURL: "https://lh5.googleusercontent.com/p/AF1QipPxvyEnTtRPV_sKYRp6DbIT01xTvPWE8rdXBUYJ=w121-h121-n-k-no",
-    // average: 5,
+    avgRating: 4,
     phone: "(480) 984-5259",
     url: "na",
     address: {
+      full: "10001 E Main St Mesa, AZ 85207",
       street: "10001 E Main St",
-      cityState: "Mesa, Az",
+      cityState: "Mesa, AZ",
       zipcode:"85207"
     }, 
     map: "https://www.google.com/search?rlz=1C1OKWM_enUS847US847&tbm=lcl&sxsrf=ACYBGNSTNiAfKwRETiyJJlG18Mw7jIXC1g%3A1570907846147&ei=xiaiXdfQCNH19AOImYagBA&q=sam+auto&oq=sam+auto&gs_l=psy-ab.3..0l10.2053.4236.0.5135.10.10.0.0.0.0.127.865.7j2.9.0....0...1c.1.64.psy-ab..1.9.864...35i39k1j0i131k1j0i10i67k1j0i67k1j0i131i67k1.0.Iq9fKAdGOTQ#rlfi=hd:;si:;mv:[[33.41586352042389,-111.6121588713022],[33.41347690781688,-111.61753396872791],null,[33.41467022231876,-111.61484642001506],18]",
@@ -153,10 +155,11 @@ const businessSeed = [
     id: 3,
     name: "Mesa Auto Works",
     imageURL: "https://www.google.com/maps/uv?hl=en&pb=!1s0x872ba586da5c9699:0xffc1f4eb6161b00f!2m22!2m2!1i80!2i80!3m1!2i20!16m16!1b1!2m2!1m1!1e1!2m2!1m1!1e3!2m2!1m1!1e5!2m2!1m1!1e4!2m2!1m1!1e6!3m1!7e115!4shttps://lh5.googleusercontent.com/p/AF1QipMoY94ok94PdgejSU7xHCHxlpbNQvEq0S-MQgTS%3Dw175-h117-n-k-no!5sauto+repair+near+me+-+Google+Search&imagekey=!1e10!2sAF1QipMoY94ok94PdgejSU7xHCHxlpbNQvEq0S-MQgTS",
-    // average: 5,
+    avgRating: 4,
     phone: "(480) 969-1954",
     url: "https://mesaautoworks.com/",
     address: {
+      full: "1636 N Banning Mesa, Az 85205",
       street: "1636 N Banning",
       cityState: "Mesa, Az",
       zipcode:"85205"
@@ -187,4 +190,4 @@ db.Business
     process.exit(1);
   });
 
-// business shit end  
+// business shit end
