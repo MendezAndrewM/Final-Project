@@ -9,7 +9,7 @@ import _About from "../components/About";
 
 // Lines 11-31 only exist to generate placeholder Results
 const resultArr = []
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 5; i++) {
     resultArr.push(
         <Result name="PlaceHolder" image="https://via.placeholder.com/150" 
                         avgRating={<i class="material-icons">star star star star star_half</i>} 
@@ -31,19 +31,21 @@ for (let i = 0; i < 10; i++) {
 
 class Home extends Component {
     state = {
-        loggedIn: true,
         businesses:[]
     }
 
-    componentDidMount(){
-        this.handleSearch();
+    componentDidMount() {
+    this.loadBusinesses();
+    this.handleSearch();
     }
+    
+    loadBusinesses = () => {
+        API.getBusinesses()
+        .then(res => this.setState({businesses: res.data }))
+        .catch(err => console.log(err))
+    }
+        
 
-    /*
-        ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-                            API Calls will go Here
-        ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-    */
    handleSearch = event => {
    
       let loadbusinesses = () => {
