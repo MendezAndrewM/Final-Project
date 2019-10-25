@@ -11,7 +11,7 @@ const Result = (props) => {
     return (
         <Row className="ResultBox">
                 <img className="col s12 m4 responsive-img" src={props.image} alt={props.name} />
-                <div className="Info col s12 m8">
+                <div className="Info col s12">
                     <Row>
                         <h5 className="col s12 m7">{props.name}</h5>
                         <div className="col s12 m5">
