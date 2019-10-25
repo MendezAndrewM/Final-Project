@@ -33,23 +33,21 @@ class Home extends Component {
     state = {
         loggedIn: true,
         businesses:[]
+
     }
 
     componentDidMount(){
         this.handleSearch();
     }
 
-    /*
-        ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-                            API Calls will go Here
-        ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-    */
+    
    handleSearch = event => {
    
       let loadbusinesses = () => {
            API.getBusinesses()
            .then(res => this.setState({ businesses: res.data }))
            .catch(err => console.log(err));
+           
 
         };
         console.log("iv been clicked")
