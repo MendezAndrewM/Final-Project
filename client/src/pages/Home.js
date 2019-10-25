@@ -11,11 +11,12 @@ import { Link } from "react-router-dom";
 class Home extends Component {
     state = {
         businesses:[]
+
     }
 
     componentDidMount() {
-    this.loadBusinesses();
-    // this.handleSearch();
+    // this.loadBusinesses();
+    this.handleSearch();
     }
                                       //    ||
     handleBizzClick() {             //      ||    This will need to appear below, in the JSX part
@@ -31,11 +32,8 @@ class Home extends Component {
     }
         
    handleSearch = event => {
-      let loadbusinesses = () => {
-           API.getBusinesses()
-           .then(res => this.setState({ businesses: res.data }))
-           .catch(err => console.log(err));
-        };
+        
+        this.loadBusinesses()
         console.log("iv been clicked")
     }
 

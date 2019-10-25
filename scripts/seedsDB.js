@@ -118,14 +118,7 @@ const businessSeed = [
       }, 
     map: "https://www.google.com/search?rlz=1C1OKWM_enUS847US847&sxsrf=ACYBGNQoiMhukeab2IZ_5ggF_t0N8RtaxQ:1570907796599&q=walmart&npsic=0&rflfq=1&rlha=0&rllag=33385920,-111750975,4850&tbm=lcl&ved=2ahUKEwiNsMPJt5flAhWbJzQIHf31DKQQtgN6BAgVEAQ&tbs=lrf:!2m1!1e3!3sIAE,lf:1,lf_ui:4&rldoc=1#rlfi=hd:;si:,33.3816365585445,-111.73853038741885;mv:[[33.40163196651206,-111.68677336856558],[33.36343204096816,-111.77277492737699],null,[33.38253410151596,-111.72977414797128],14];tbs:lrf:!2m1!1e3!3sIAE,lf:1,lf_ui:4",
     description: "Local wal-mart",
-    reviews: [
-      {
-        comment: "took long but was done right",
-        service: "tires",
-        payment: "150.00",
-        rating: 3
-      }
-    ]
+    reviews: db.Review
   },
   {
     id: 2,
@@ -142,14 +135,7 @@ const businessSeed = [
     }, 
     map: "https://www.google.com/search?rlz=1C1OKWM_enUS847US847&tbm=lcl&sxsrf=ACYBGNSTNiAfKwRETiyJJlG18Mw7jIXC1g%3A1570907846147&ei=xiaiXdfQCNH19AOImYagBA&q=sam+auto&oq=sam+auto&gs_l=psy-ab.3..0l10.2053.4236.0.5135.10.10.0.0.0.0.127.865.7j2.9.0....0...1c.1.64.psy-ab..1.9.864...35i39k1j0i131k1j0i10i67k1j0i67k1j0i131i67k1.0.Iq9fKAdGOTQ#rlfi=hd:;si:;mv:[[33.41586352042389,-111.6121588713022],[33.41347690781688,-111.61753396872791],null,[33.41467022231876,-111.61484642001506],18]",
     description: "blah blah blah",
-    reviews: [
-      {
-        comment: "dang this is pretty good",
-        service: "breaks",
-        payment: "295.00",
-        rating: 4
-      }
-    ]
+    reviews: db.Review
   },
   {
     id: 3,
@@ -166,13 +152,8 @@ const businessSeed = [
     },
     map: "https://www.google.com/search?rlz=1C1OKWM_enUS847US847&tbm=lcl&sxsrf=ACYBGNRQb-s4mk9MNM6OWlvgMys6SmsFQA%3A1570908574605&ei=nimiXcHJJMa70PEPkJGMuA4&q=auto+repair+near+me&oq=auto+repa&gs_l=psy-ab.3.1.0l10.4296.6218.0.7736.5.5.0.0.0.0.146.550.1j4.5.0....0...1c.1.64.psy-ab..0.5.548...0i67k1j0i10k1j0i20i263k1.0.1CG8OU7Edk8#rlfi=hd:;si:18429280441965064207;mv:[[33.44964122071061,-111.71359986245767],[33.440098091297884,-111.73471406382993],null,[33.44486978723741,-111.7241569631438],16]",
     description: "its in mesa",
-    reviews: 
-      {
-        comment: "dang this is pretty good",
-        service: "oil change",
-        payment: "20.00",
-        rating: 4
-      },
+    reviews: db.Review,
+      
     
      
   },
@@ -190,4 +171,71 @@ db.Business
     process.exit(1);
   });
 
-// business shit end
+// business stuff
+
+
+// review stuff
+
+const reviewSeed = [
+  {
+    location:"Wal-mart",
+    author: "jake",
+    comment: "this place takes awhile",
+    service: "oil change",
+    payment: "$40.00",
+    rating: 3
+  },
+  {
+    location:"Wal-mart",
+    author: "tom",
+    comment: "this place rocks",
+    service: "tires",
+    payment: "$140.00",
+    rating: 5
+  },
+  {
+    location:"Wal-mart",
+    author: "andrew",
+    comment: "this place takes awhile",
+    service: "oil change",
+    payment: "$45.00",
+    rating: 2
+  },
+  {
+    location:"Sam's Auto",
+    author: "Jake",
+    comment: "this place is the best",
+    service: "oil change",
+    payment: "$30.00",
+    rating: 5
+  },
+  {
+    location:"Sam's Auto",
+    author: "jake",
+    comment: "this place always does a great job",
+    service: "engine swap",
+    payment: "$2500.00",
+    rating: 5
+  },
+  {
+    location:"Mesa Auto Works",
+    author: "jake",
+    comment: "i feel like i got shafted",
+    service: "engine swap",
+    payment: "$5600.00",
+    rating: 2
+  },
+
+];
+
+db.Review
+  .remove({})
+  .then(() => db.Review.collection.insertMany(reviewSeed))
+  .then(data => {
+    console.log(data.result.n + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
