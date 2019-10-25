@@ -29,6 +29,8 @@ class ReviewForm extends Component {
       if (!this.state.comment || !this.state.service || !this.state.payment || !this.state.rating) {
         alert("Fill out the whole name please:)");
       } else {
+
+        
         alert("Thank you for your review!")
       }
       this.setState({
