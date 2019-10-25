@@ -19,13 +19,22 @@ const businessSchema = new Schema({
   // Company website
   url: String,
   // Address of business
-  address: { type: String, required: true }, 
+  address: {
+    street: String,
+    citystate: String,
+    zipcode: String
+  }, 
   // Location of business on a map, stored in a link for clickable link
   map: { type: String, required: true },
   // Description of business
   description: { type: String, required: true },
   // Comments associated with specfic business
-  comments: [{ body: String, date: Date, rating: Number }],
+  reviews: {
+    comments: String,
+    service: String,
+    payment: String,
+    rating: Number
+  }
   // date: { type: Date, default: Date.now }
 });
 
