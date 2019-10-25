@@ -36,6 +36,7 @@ class Home extends Component {
 
     componentDidMount() {
     this.loadBusinesses();
+    this.handleSearch();
     }
     
     loadBusinesses = () => {
@@ -44,10 +45,25 @@ class Home extends Component {
         .catch(err => console.log(err))
     }
         
+
+   handleSearch = event => {
+   
+      let loadbusinesses = () => {
+           API.getBusinesses()
+           .then(res => this.setState({ businesses: res.data }))
+           .catch(err => console.log(err));
+
+        };
+        console.log("iv been clicked")
+    }
+
+
     render() {
         return (
             <div>
-                <Jumbotron />
+                <Jumbotron 
+                onClick={this.handleSearch}
+                />
                 <Row>
                     <div className="col s10 m8 offset-m2 offset-s1 ">
                         
