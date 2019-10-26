@@ -11,17 +11,16 @@ import { Link } from "react-router-dom";
 class Home extends Component {
     state = {
         businesses:[]
-
     }
 
     componentDidMount() {
     this.loadBusinesses();
     // this.handleSearch();
+    this.handleBizzClick();
     }
 
     handleBizzClick() {
-    
-         
+        API.getReviews().then(res => console.log(res.data));
     }
     
     loadBusinesses = () => {
@@ -45,7 +44,6 @@ class Home extends Component {
                 />
                 <Row>
                     <div className="col s10 m8 offset-m2 offset-s1 ">
-                        
                         {this.state.loggedIn ? <_About /> : <></>}
                         <br></br>
                         <h3>Featured Businesses</h3>
@@ -61,9 +59,8 @@ class Home extends Component {
                                 // address={obj.address.full}
                                 map={obj.map}
                                 description={obj.description}
-                            >
-                                <Link  to={`/business/${obj._id}`} />
-                            </Result>)
+                                _id={obj._id}
+                            />)
                         }
                     </div>
                 </Row>

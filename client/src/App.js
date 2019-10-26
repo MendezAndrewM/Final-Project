@@ -25,9 +25,9 @@ class App extends Component {
           <Nav loggedIn={this.state.isSignedIn} />
           <Route exact path="/" component={Home} />
           <Route exact path="/profile" component={UserPage} />
-          <Route exact path="/business/:businessid" component={BusinessPage} />
+          <Route exact path="/business/:id" component={BusinessPage} />
           <Route exact path="/About" component={About} />
-          <Route exact path="/business/:businessid/review" component={ReviewForm}/>
+          <Route exact path="/business/:id/review" component={ReviewForm}/>
           <Footer />
         </div>
       </Router>
