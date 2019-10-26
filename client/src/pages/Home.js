@@ -19,11 +19,11 @@ class Home extends Component {
     this.handleSearch();
     }
                                       //    ||
-    handleBizzClick() {             //      ||    This will need to appear below, in the JSX part
-        //                                 \||/               
-        //                                  \/
-        // <Link to="/" className={window.location.pathname === "/">    
-    }
+    // handleBizzClick() {             //      ||    This will need to appear below, in the JSX part
+    //     //                                 \||/               
+    //     //                                  \/
+    //     // <Link to="/" className={window.location.pathname === "/">    
+    // }
     
     loadBusinesses = () => {
         API.getBusinesses()

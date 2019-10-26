@@ -20,7 +20,9 @@ export default {
   getBusinesses: function() {
     return axios.get("/api/business");
   },
-  
+  getBusinessReview: function(id){
+    return axios.get("/api/business" + id + "review")
+  },
   getBusiness: function(id) {
     return axios.get("/api/business/" + id);
   },
@@ -36,14 +38,14 @@ export default {
     return axios.get("/api/Reviews");
   },
 
-  getBusiness: function(id) {
+  getReview: function(id) {
     return axios.get("/api/Reviews/" + id);
   },
-  deleteBusiness: function(id) {
+  deleteReview: function(id) {
     return axios.delete("/api/Reviews/" + id);
   },
 
-  saveBusiness: function(reviewData) {
+  saveReview: function(reviewData) {
     return axios.post("/api/Reviews", reviewData);
   },
 
