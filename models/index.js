@@ -1,5 +1,5 @@
 module.exports = {
-    Review: require("./business"), 
+    Review: require("./review"), 
     Business: require("./business"),
     User: require("./user")
 };
