@@ -15,27 +15,26 @@ class Home extends Component {
     }
 
     componentDidMount() {
-    // this.loadBusinesses();
-    this.handleSearch();
+    this.loadBusinesses();
+    // this.handleSearch();
     }
-                                      //    ||
-    handleBizzClick() {             //      ||    This will need to appear below, in the JSX part
-        //                                 \||/               
-        //                                  \/
+
+    handleBizzClick() {
+        console.log(this.state.businesses)
         // <Link to="/" className={window.location.pathname === "/">    
     }
     
     loadBusinesses = () => {
         API.getBusinesses()
         .then(res => this.setState({businesses: res.data }))  
+        // .then(console.log(this.state.businesses))
         .catch(err => console.log(err))
     }
         
-   handleSearch = event => {
-        
-        this.loadBusinesses()
-        console.log("iv been clicked")
-    }
+//    handleSearch = event => {
+//         this.loadBusinesses()
+//         console.log("iv been clicked")
+//     }
 
 
     render() {
@@ -58,7 +57,7 @@ class Home extends Component {
                                 // average={}
                                 phone={obj.phone}
                                 url={obj.url}
-                                address={obj.address.full}
+                                // address={obj.address.full}
                                 map={obj.map}
                                 description={obj.description}
                             />)
