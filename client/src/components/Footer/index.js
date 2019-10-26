@@ -25,7 +25,7 @@ const Foot = () => {
 
                 </div>
             </Row>
-            <span>© 2019 Working Title</span>
+            <span>© 2019 WhadjaPay</span>
         </div>
     )
 };
