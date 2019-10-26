@@ -12,27 +12,27 @@ class ReviewForm extends Component {
     
  
     state = {
-      location: "Wal-Mart",
-      author: "jake",
-      comment: "lame",
-      service: "tires",
-      payment: "30",
+      
+      author: "",
+      comment: "",
+      service: "",
+      payment: "",
       rating: 0
     };
 
-    componentDidMount(){
-      const {match:{params}} = this.props;
-      axios.get(`api/business/${params.businessid}/review`)
-        .then(({data: business}) => {
-          this.setState({
-              location: {business}
-          })
-        })
+    // componentDidMount(){
+    //   const {match:{params}} = this.props;
+    //   axios.get(`api/business/${params.businessid}/review`)
+    //     .then(({data: business}) => {
+    //       this.setState({
+    //           location: {business}
+    //       })
+    //     })
 
-      this.setState({
-        location: `${params.businessid}`
-      })
-    }
+    //   this.setState({
+    //     location: `${params.businessid}`
+    //   })
+    // }
 
     handleInputChange = event => {
       const {name, value} = event.target;
@@ -56,7 +56,7 @@ class ReviewForm extends Component {
       } else {
 
         API.saveReview({
-          location: this.state.location,
+          
           author: this.state.author,
           comment: this.state.comment,
           service: this.state.service,
