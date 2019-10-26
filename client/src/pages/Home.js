@@ -14,28 +14,27 @@ class Home extends Component {
 
     }
 
-    // componentDidMount() {
-    // // this.loadBusinesses();
+    componentDidMount() {
+    this.loadBusinesses();
     // this.handleSearch();
-    // }
-                                      //    ||
-    // handleBizzClick() {             //      ||    This will need to appear below, in the JSX part
-    //     //                                 \||/               
-    //     //                                  \/
-    //     // <Link to="/" className={window.location.pathname === "/">    
-    // }
+    }
+
+    handleBizzClick() {
+    
+         
+    }
     
     loadBusinesses = () => {
         API.getBusinesses()
         .then(res => this.setState({businesses: res.data }))  
+        // .then(console.log(this.state.businesses))
         .catch(err => console.log(err))
     }
         
-   handleSearch = event => {
-        
-        this.loadBusinesses()
-        console.log("iv been clicked")
-    }
+//    handleSearch = event => {
+//         this.loadBusinesses()
+//         console.log("iv been clicked")
+//     }
 
 
     render() {
@@ -50,18 +49,21 @@ class Home extends Component {
                         {this.state.loggedIn ? <_About /> : <></>}
                         <br></br>
                         <h3>Featured Businesses</h3>
-                        {this.state.businesses.map(obj =>
-                            <Result onClick={this.handleBizzClick()}
+                        {this.state.businesses.filter(obj => !obj.author)
+                        .map(obj =>
+                            <Result 
                                 name={obj.name} 
                                 avgRating={displayStars(obj.avgRating)}
                                 // priceCompare={obj.}
                                 // average={}
                                 phone={obj.phone}
                                 url={obj.url}
-                                address={obj.address.full}
+                                // address={obj.address.full}
                                 map={obj.map}
                                 description={obj.description}
-                            />)
+                            >
+                                <Link  to={`/business/${obj._id}`} />
+                            </Result>)
                         }
                     </div>
                 </Row>
