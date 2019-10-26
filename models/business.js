@@ -2,14 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 // let imgPath = 'placeholder' <- do we need this?
 
-const reviewSchema = new Schema({
-  location: [{ type: Schema.Types.ObjectId, ref: 'Business' }],
-  author:{type: String},
-  comment:{type: String },
-  service:{type: String },
-  payment:{type: String},  
-  rating:{type: Number}
-})
+
 const businessSchema = new Schema({
   //ID number associated with each business, for multiple locations of one chain
   _id: Schema.Types.ObjectId,
@@ -38,14 +31,21 @@ const businessSchema = new Schema({
   // Description of business
   description: { type: String },
   // Comments associated with specfic business
-  reviews: [reviewSchema]
+  reviews: [
+    {
+      
+      type: Schema.Types.ObjectId,
+     
+      ref: "Review"
+    }
+  ]
   
-  // date: { type: Date, default: Date.now }
+  
 });
 
 
-const Review = mongoose.model("Review", reviewSchema);
+
 const Business = mongoose.model("Business", businessSchema);
 
 module.exports = Business;
-module.exports = Review;
+
