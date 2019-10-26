@@ -4,7 +4,7 @@ module.exports = {
     findAll: function(req, res) {
         db.Review
           .find(req.query)
-          .sort({ service: -1 })
+          .sort({ location: -1 })
           .then(dbModel => res.json(dbModel))
           .catch(err => res.status(422).json(err));
       },

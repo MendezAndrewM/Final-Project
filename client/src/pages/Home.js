@@ -20,8 +20,8 @@ class Home extends Component {
     }
 
     handleBizzClick() {
-        console.log(this.state.businesses)
-        // <Link to="/" className={window.location.pathname === "/">    
+    
+         
     }
     
     loadBusinesses = () => {
@@ -49,8 +49,9 @@ class Home extends Component {
                         {this.state.loggedIn ? <_About /> : <></>}
                         <br></br>
                         <h3>Featured Businesses</h3>
-                        {this.state.businesses.map(obj =>
-                            <Result onClick={this.handleBizzClick()}
+                        {this.state.businesses.filter(obj => !obj.author)
+                        .map(obj =>
+                            <Result 
                                 name={obj.name} 
                                 avgRating={displayStars(obj.avgRating)}
                                 // priceCompare={obj.}
@@ -60,7 +61,9 @@ class Home extends Component {
                                 // address={obj.address.full}
                                 map={obj.map}
                                 description={obj.description}
-                            />)
+                            >
+                                <Link  to={`/business/${obj._id}`} />
+                            </Result>)
                         }
                     </div>
                 </Row>
