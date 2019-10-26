@@ -14,10 +14,10 @@ class Home extends Component {
 
     }
 
-    componentDidMount() {
-    // this.loadBusinesses();
-    this.handleSearch();
-    }
+    // componentDidMount() {
+    // // this.loadBusinesses();
+    // this.handleSearch();
+    // }
                                       //    ||
     // handleBizzClick() {             //      ||    This will need to appear below, in the JSX part
     //     //                                 \||/               
