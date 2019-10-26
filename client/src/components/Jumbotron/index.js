@@ -7,10 +7,13 @@ const Jumbotron = (props) =>{
     return(
         <div className="jumbo">
             
-            <h1>The Thing</h1>
-            <h5>And some stuff about the thing</h5>
+            <h1>WhadjaPay</h1>
+            <h5>search by service or zip</h5>
             <SearchBar 
             onClick={props.onClick}
+            onChange={props.onChange}
+            name={props.name}
+            value={props.value}
             />
             
             

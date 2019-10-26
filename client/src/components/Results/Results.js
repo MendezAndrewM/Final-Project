@@ -6,10 +6,11 @@ import ReviewForm from "../ReviewForm";
 
 const percentDiff = (x, y) => ((y - x) / x) * 100;
 
-const Result = (props) => {
+const Result = props => {
     let comp = percentDiff(Number(props.priceCompare), Number(props.average));
     return (
         <Row className="ResultBox">
+            <a href={`/business/${props._id}`} >
                 <img className="col s12 m4 responsive-img" src={props.image} alt={props.name} />
                 <div className="Info col s12">
                     <Row>
@@ -17,9 +18,9 @@ const Result = (props) => {
                         <div className="col s12 m5">
                             <span className="rating">{props.avgRating}</span>
                             <br></br>
-                            { comp > 0
+                            {comp > 0
                                 ? <span className="priceRank">{comp}% more than average</span>
-                                : <span className="priceRank">{comp.toString().replace("-","")}% less than average</span>
+                                : <span className="priceRank">{comp.toString().replace("-", "")}% less than average</span>
                             }
                         </div>
                     </Row>
@@ -32,7 +33,7 @@ const Result = (props) => {
                             <a target="none" href={props.map}>{props.address}</a>
                         </div>
                         <div className="col s10 m5">
-                            <a target="none" href="/business/:business/review">
+                            <a href={`/business/${props._id}/review`}>
                                 <button className="col s10 offset-s2 offset-m1 center-align">Submit Review</button>
                             </a>
                         </div>
@@ -43,6 +44,7 @@ const Result = (props) => {
                         </div>
                     </Row>
                 </div>
+            </a>
         </Row>
     )
 }

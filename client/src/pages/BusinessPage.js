@@ -4,19 +4,24 @@ import ServicePrices from "../components/ServicePrices";
 import Reviews from "../components/Reviews";
 import BusinessHeader from "../components/BusinessHeader";
 import getBusiness from "../utils/API";
+import displayStars from "../utils/utils"
+import API from "../utils/API";
 // import displayStars from "../utils/utils";
 
 
 class BusinessPage extends Component {
 
     state = {
-        
 
-        Profile: {
+
+        Profile: [{
             name: "Name of Business here",
             phone: "(602)555-5555",
-            streetAddress: "1234 Fake Blvd",
-            cityStateZip: "Nowhere, AZ 85001",
+            address: {
+                street: "1234 Fake Blvd",
+                cityState: "Nowhere, AZ",
+                zipcode: "85001" 
+            },
             images: ["http://placeimg.com/400/275/arch", "http://placeimg.com/1200/1200/arch"],
             rating: 3.7, 
 
@@ -74,17 +79,27 @@ class BusinessPage extends Component {
                 }
             ]
 
-        }
+        }]
+
     }
 
-    // Event handlers
-    // Functions to add comments / ratings / reviews
-    // via API calls 
+    componentDidMount() {
+        this.loadBooks();
+    }
 
-    // componentDidMount() {
-    //     const { match: { params } } = this.props;
-    //     getBusiness().then 
-    // }
+    loadBooks = () => {
+        API.getBusiness(window.location.href.match(/([^\/]+)\/?$/g)[0])
+            .then(res =>
+                this.setState({ Profile: res.data })
+            ).then(res => console.log(this.state.Profile))
+            .catch(err => console.log(err));
+    };
+
+
+    getBusiness() {
+        API.getBusiness()
+        .then(res => this.setState({Profile: res.data }))
+    }
 
     displayStars = num => {
         if (num < 0.3) { return "star_half" }  //Sets minimum rating as half_star
@@ -97,35 +112,62 @@ class BusinessPage extends Component {
             return stars;
         }
     }
+
+
+
+    // render() {
+    //     return ( <>
+    //         {this.state.Profile.map(obj => <>
+    //             <ImageBar img={obj.imageURL} />
+
+    //             <BusinessHeader
+    //             // img1={ obj.images[0] }
+    //             // img2={ obj.images[1] }
+    //             header={ obj.name }
+    //             phone={ obj.phone }
+    //             streetAddress={ obj.address.street }
+    //             cityState={ `${obj.address.cityState} ${obj.address.zipcode}` }
+    //             rating={ displayStars(obj.avgRating) }
+    //             />
+
+    //             <ImageBar img={obj.imageURL} />
+
+    //              {/* <ServicePrices 
+    //                 services={this.state.Profile[0].servicesProvided} 
+    //                 />
+    //                 <Reviews 
+    //                 reviews={this.state.Profile[0].reviews}  */}
+    //             {/* /> */}
+    //             </>
+    //         )}
+    //     </>)
+    // }
+
+        // render() {
+        //     return (<>
+        //         {/* <ImageBar img={this.state.Profile.imageURL} /> */}
+
+        //         <BusinessHeader
+        //             // img1={ obj.images[0] }
+        //             // img2={ obj.images[1] }
+        //             header={this.state.Profile.name}
+        //             phone={this.state.Profile.phone}
+        //             streetAddress={this.state.Profile.address.street}
+        //             cityState={`${this.state.Profile.address.cityState} ${this.state.Profile.address.zipcode}`}
+        //             rating={displayStars(this.state.Profile.avgRating)}
+        //         />
+
+        //         <ImageBar img={this.state.Profile.imageURL} />
+
+        //         {/* <ServicePrices 
+        //             services={this.state.Profile[0].servicesProvided} 
+        //             />
+        //             <Reviews 
+        //             reviews={this.state.Profile[0].reviews}  */}
+        //         {/* /> */}
+        //     </>)
+        // }
     
-
-
-    render() {
-        return (
-            <>
-                <ImageBar img={this.state.Profile.images[0]} />
-
-                <BusinessHeader
-                    img1={ this.state.Profile.images[0] }
-                    img2={ this.state.Profile.images[1] }
-                    header={ this.state.Profile.name }
-                    phone={ this.state.Profile.phone }
-                    streetAddress={ this.state.Profile.streetAddress }
-                    cityState={ this.state.Profile.cityStateZip }
-                    rating={ this.displayStars(this.state.Profile.rating) }
-                />
-
-                <ImageBar img={this.state.Profile.images[1]} />
-
-                <ServicePrices 
-                    services={this.state.Profile.servicesProvided} 
-                />
-                <Reviews 
-                    reviews={this.state.Profile.reviews} 
-                />
-            </>
-        )
-    }
 
 
 }
