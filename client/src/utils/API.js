@@ -35,18 +35,18 @@ export default {
   },
 // review stuff
   getReviews: function() {
-    return axios.get("/api/Reviews");
+    return axios.get("/api/reviews");
   },
 
   getReview: function(id) {
-    return axios.get("/api/Reviews/" + id);
+    return axios.get("/api/reviews/" + id);
   },
   deleteReview: function(id) {
-    return axios.delete("/api/Reviews/" + id);
+    return axios.delete("/api/reviews/" + id);
   },
 
-  saveReview: function(reviewData) {
-    return axios.post("/api/Reviews", reviewData);
+  saveReview: function(data) {
+    return axios.post("/api/reviews", data);
   },
 
 };

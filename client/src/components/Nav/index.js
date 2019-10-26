@@ -10,7 +10,7 @@ import "./style.css"
 const Nav = (props) => {
 
   return (
-    <Navbar className="nav-style" brand={<a>Working Title</a>} alignLinks="right">
+    <Navbar className="nav-style" brand={<a>WhadjaPay</a>} alignLinks="right">
 
 
       <NavItem href="/">
@@ -21,8 +21,8 @@ const Nav = (props) => {
           Home
         </Link>
       </NavItem>
-
-      <NavItem>
+{/* future feature */}
+      {/* <NavItem>
         <Link
           to="/profile"
           className={window.location.pathname === "/profile" 
@@ -30,17 +30,18 @@ const Nav = (props) => {
           : "nav-link"}>
           Profile
         </Link>
-      </NavItem>
-
-      <NavItem href="/thisspecificbusiness">
+      </NavItem> */}
+{/* future feature */}
+{/* idk if we still need */}
+      {/* <NavItem href="/thisspecificbusiness">
         <Link to="/thisspecificbusiness"
           className={window.location.pathname === "/thisspecificbusiness" 
           ? "nav-link active" 
           : "nav-link"}>
           Bizz
         </Link>
-      </NavItem>
-      
+      </NavItem> */}
+      {/* idk if we still need */}
       <NavItem href="/About">
         <Link to="/About"
         className={window.location.pathname === "/About" 

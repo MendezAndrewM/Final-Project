@@ -12,11 +12,11 @@ class ReviewForm extends Component {
     
  
     state = {
-      location: "",
-      author: "",
-      comment: "",
-      service: "",
-      payment: "",
+      location: "Wal-Mart",
+      author: "jake",
+      comment: "lame",
+      service: "tires",
+      payment: "30",
       rating: 0
     };
 
@@ -70,7 +70,7 @@ class ReviewForm extends Component {
         comment: "",
         service: "",
         payment: "",
-        rating: ""
+        rating: 0
       });
 
     };

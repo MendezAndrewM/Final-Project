@@ -228,14 +228,14 @@ const reviewSeed = [
 
 ];
 
-db.Review
-  .remove({})
-  .then(() => db.Review.collection.insertMany(reviewSeed))
-  .then(data => {
-    console.log(data.result.n + " records inserted!");
-    process.exit(0);
-  })
-  .catch(err => {
-    console.error(err);
-    process.exit(1);
-  });
+// db.Review
+//   .remove({})
+//   .then(() => db.Review.collection.insertMany(reviewSeed))
+//   .then(data => {
+//     console.log(data.result.n + " records inserted!");
+//     process.exit(0);
+//   })
+//   .catch(err => {
+//     console.error(err);
+//     process.exit(1);
+//   });
