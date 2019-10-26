@@ -6,12 +6,13 @@ import ReviewForm from "../ReviewForm";
 
 const percentDiff = (x, y) => ((y - x) / x) * 100;
 
-const Result = (props) => {
+const Result = (props, {children}) => {
     let comp = percentDiff(Number(props.priceCompare), Number(props.average));
     return (
         <Row className="ResultBox">
                 <img className="col s12 m4 responsive-img" src={props.image} alt={props.name} />
                 <div className="Info col s12">
+                    { children }
                     <Row>
                         <h5 className="col s12 m7">{props.name}</h5>
                         <div className="col s12 m5">
