@@ -58,7 +58,7 @@ class Home extends Component {
                                 // average={}
                                 phone={obj.phone}
                                 url={obj.url}
-                                // address={obj.address.full}
+                                address={obj.address.full}
                                 map={obj.map}
                                 description={obj.description}
                             >
