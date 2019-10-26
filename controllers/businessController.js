@@ -1,7 +1,7 @@
 const db = require("../models/");
 
 module.exports = {
-  // business shit
+  // business stuff
   findAll: function(req, res) {
     db.Business
       .find(req.query)
@@ -34,5 +34,5 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   }
-  // end of business shit
+  // end of business stuff
 };
