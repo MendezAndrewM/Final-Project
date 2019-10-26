@@ -1,18 +1,38 @@
 import React, { Component } from "react";
+import axios from "axios";
 import { Row, Col } from "react-materialize";
 // import Reviews from "./Reviews/Reviews.js";
-import "./style.css"
+import "./style.css";
+import API from "../../utils/API";
+import {useParams} from "react-router";
+
+
 
 class ReviewForm extends Component {
-
-
-
+    
+ 
     state = {
-      comment: "",
-      service: "",
-      payment: "",
+      location: "Wal-Mart",
+      author: "jake",
+      comment: "lame",
+      service: "tires",
+      payment: "30",
       rating: 0
     };
+
+    componentDidMount(){
+      const {match:{params}} = this.props;
+      axios.get(`api/business/${params.businessid}/review`)
+        .then(({data: business}) => {
+          this.setState({
+              location: {business}
+          })
+        })
+
+      this.setState({
+        location: `${params.businessid}`
+      })
+    }
 
     handleInputChange = event => {
       const {name, value} = event.target;
@@ -28,23 +48,53 @@ class ReviewForm extends Component {
       event.preventDefault();
       if (!this.state.comment || !this.state.service || !this.state.payment || !this.state.rating) {
         alert("Fill out the whole name please:)");
+      if (!this.state.author){
+        this.setState({
+          author: "anon"
+        })
+      }  
       } else {
+
+        API.saveReview({
+          location: this.state.location,
+          author: this.state.author,
+          comment: this.state.comment,
+          service: this.state.service,
+          payment: this.state.payment,
+          rating: this.state.rating
+        }).catch(err => console.log(err))
         alert("Thank you for your review!")
       }
       this.setState({
+        author: "",
         comment: "",
         service: "",
         payment: "",
-        rating: ""
+        rating: 0
       });
 
     };
 
+    
+    render() {
+      
 
-  render() {
     return (
       <Row className="bigWrap">
         <Col s={10} offset="s3">
+          <Row>
+            <Col s={6} className="input-field">
+              <textarea 
+              id="textarea0" 
+              className="materialize-textarea" 
+              data-length="120"
+              name="author"
+              value={this.state.author}
+              onChange={this.handleInputChange}
+               />
+              <label for="textarea0">Name(optional)</label>
+            </Col>
+          </Row>
           <Row>
             <Col s={6} className="input-field">
               <textarea 

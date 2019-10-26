@@ -8,6 +8,7 @@ import UserPage from "./pages/UserPage";
 import About from "./pages/About"
 import FormPage from "./pages/formPage";
 import API from "../src/utils/API";
+import ReviewForm from "./components/ReviewForm/index"
 
 
 class App extends Component {
@@ -24,9 +25,9 @@ class App extends Component {
           <Nav loggedIn={this.state.isSignedIn} />
           <Route exact path="/" component={Home} />
           <Route exact path="/profile" component={UserPage} />
-          <Route exact path="/business/:businessid" component={BusinessPage} />
+          <Route exact path="/business/:id" component={BusinessPage} />
           <Route exact path="/About" component={About} />
-          <Route exact path="/business/:businessid/review" component={FormPage}/>
+          <Route exact path="/business/:id/review" component={ReviewForm}/>
           <Footer />
         </div>
       </Router>

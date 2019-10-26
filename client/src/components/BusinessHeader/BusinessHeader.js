@@ -41,7 +41,7 @@ const BusinessHeader = props => <>
                     </h1>
                     <p>Price Diff Compared to others</p>
                 </div>
-                <a target="none" href="/business/:business/review">
+                <a href={`/business/${props._id}/review`}>
                     <button className="BizBtn col s8 m7 l5 xl4 offset-s2 offset-m0">
                         Submit Review
                     </button>

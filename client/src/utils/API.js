@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default {
-//   user shit
+//   user stuff
   getUsers: function() {
     return axios.get("/api/user");
   },
@@ -16,11 +16,13 @@ export default {
   saveUser: function(userData) {
     return axios.post("/api/user", userData);
   },
-// business shit
+// business stuff
   getBusinesses: function() {
     return axios.get("/api/business");
   },
-  
+  getBusinessReview: function(id){
+    return axios.get("/api/business" + id + "review")
+  },
   getBusiness: function(id) {
     return axios.get("/api/business/" + id);
   },
@@ -30,6 +32,21 @@ export default {
   
   saveBusiness: function(businessData) {
     return axios.post("/api/business", businessData);
+  },
+// review stuff
+  getReviews: function() {
+    return axios.get("/api/reviews");
+  },
+
+  getReview: function(id) {
+    return axios.get("/api/reviews/" + id);
+  },
+  deleteReview: function(id) {
+    return axios.delete("/api/reviews/" + id);
+  },
+
+  saveReview: function(data) {
+    return axios.post("/api/reviews", data);
   },
 
 };
