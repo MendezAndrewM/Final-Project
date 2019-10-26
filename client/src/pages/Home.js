@@ -7,15 +7,17 @@ import Result from "../components/Results";
 import _About from "../components/About";
 import displayStars from "../utils/utils";
 import { Link } from "react-router-dom";
+import { Query } from "mongoose";
 
 class Home extends Component {
     state = {
-        businesses:[]
+        businesses:[],
+        query: ""
     }
 
     componentDidMount() {
     this.loadBusinesses();
-    // this.handleSearch();
+    this.handleSearch();
     this.handleBizzClick();
     }
 
@@ -29,18 +31,35 @@ class Home extends Component {
         // .then(console.log(this.state.businesses))
         .catch(err => console.log(err))
     }
+
+    handleInputChange = event => {
+        const {name, value} = event.target;
+       
+  
+        this.setState({
+          query: event.target.value
+        }); 
+  
+      };
+    handleSearch = (event) => {
+        this.state.businesses.filter(businesses => 
+            businesses.address.zipcode.includes(this.state.query)).map(searchedzip => {
+              console.log(searchedzip.address.zipcode);
+            })
+        }
         
-//    handleSearch = event => {
-//         this.loadBusinesses()
-//         console.log("iv been clicked")
-//     }
+        
+        
+        render() {
 
-
-    render() {
-        return (
-            <div>
+        
+            return (
+                <div>
                 <Jumbotron 
                 onClick={this.handleSearch}
+                onChange={this.handleInputChange}
+                name="query"
+                value={this.state.query}
                 />
                 <Row>
                     <div className="col s10 m8 offset-m2 offset-s1 ">
@@ -50,9 +69,9 @@ class Home extends Component {
                         {this.state.businesses.filter(obj => !obj.author)
                         .map(obj =>
                             <Result 
-                                name={obj.name} 
-                                avgRating={displayStars(obj.avgRating)}
-                                // priceCompare={obj.}
+                            name={obj.name} 
+                            avgRating={displayStars(obj.avgRating)}
+                            // priceCompare={obj.}
                                 // average={}
                                 phone={obj.phone}
                                 url={obj.url}
@@ -60,13 +79,13 @@ class Home extends Component {
                                 map={obj.map}
                                 description={obj.description}
                                 _id={obj._id}
-                            />)
+                                />)
                         }
                     </div>
                 </Row>
             </div>
         )
     }
-}
-
+}    
+    
 export default Home;

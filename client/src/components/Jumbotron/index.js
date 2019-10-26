@@ -11,6 +11,9 @@ const Jumbotron = (props) =>{
             <h5>search by service or zip</h5>
             <SearchBar 
             onClick={props.onClick}
+            onChange={props.onChange}
+            name={props.name}
+            value={props.value}
             />
             
             
