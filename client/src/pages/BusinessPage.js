@@ -143,30 +143,30 @@ class BusinessPage extends Component {
     //     </>)
     // }
 
-        // render() {
-        //     return (<>
-        //         {/* <ImageBar img={this.state.Profile.imageURL} /> */}
+        render() {
+            return (<>
+                {/* <ImageBar img={this.state.Profile.imageURL} /> */}
 
-        //         <BusinessHeader
-        //             // img1={ obj.images[0] }
-        //             // img2={ obj.images[1] }
-        //             header={this.state.Profile.name}
-        //             phone={this.state.Profile.phone}
-        //             streetAddress={this.state.Profile.address.street}
-        //             cityState={`${this.state.Profile.address.cityState} ${this.state.Profile.address.zipcode}`}
-        //             rating={displayStars(this.state.Profile.avgRating)}
-        //         />
+                <BusinessHeader
+                    // img1={ obj.images[0] }
+                    // img2={ obj.images[1] }
+                    header={this.state.Profile.name}
+                    phone={this.state.Profile.phone}
+                    streetAddress={this.state.Profile.address.street}
+                    cityState={`${this.state.Profile.address.cityState} ${this.state.Profile.address.zipcode}`}
+                    rating={displayStars(this.state.Profile.avgRating)}
+                />
 
-        //         <ImageBar img={this.state.Profile.imageURL} />
+                <ImageBar img={this.state.Profile.imageURL} />
 
-        //         {/* <ServicePrices 
-        //             services={this.state.Profile[0].servicesProvided} 
-        //             />
-        //             <Reviews 
-        //             reviews={this.state.Profile[0].reviews}  */}
-        //         {/* /> */}
-        //     </>)
-        // }
+                {/* <ServicePrices 
+                    services={this.state.Profile[0].servicesProvided} 
+                    />
+                    <Reviews 
+                    reviews={this.state.Profile[0].reviews}  */}
+                {/* /> */}
+            </>)
+        }
     
 
 
