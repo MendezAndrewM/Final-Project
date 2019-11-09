@@ -44,8 +44,10 @@ class Home extends Component {
     handleSearch = (event) => {
         this.state.businesses.filter(businesses => 
             businesses.address.zipcode.includes(this.state.query)).map(searchedzip => {
-              console.log(searchedzip.address.zipcode);
+                console.log(searchedzip);
+              
             })
+            
         }
         
         
