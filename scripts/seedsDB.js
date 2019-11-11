@@ -143,6 +143,7 @@ mongoose.connect(
     },
     {
       location:"Mesa Auto Works",
+      businessId: "5db2faaa2b295e062408ac46",
       author: "jake",
       comment: "i feel like i got shafted",
       service: "engine swap",
@@ -151,6 +152,7 @@ mongoose.connect(
     },
     {
       location:"Mesa Auto Works",
+      businessId: "5db2faaa2b295e062408ac46",
       author: "jake",
       comment: "i feel like i got shafted",
       service: "engine swap",
@@ -240,8 +242,6 @@ const businessSeed = [
     reviews: reviewSeed,
     
   },
-      
-    
 ];
 
 db.Business
