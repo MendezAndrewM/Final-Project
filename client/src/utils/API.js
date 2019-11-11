@@ -48,5 +48,6 @@ export default {
   saveReview: function(reviewData, id) {
     return axios.post("/api/reviews", reviewData);
   },
+  testThing: id => axios.get(`/api/business/${id}/review`)
 
 };
