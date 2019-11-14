@@ -4,6 +4,11 @@ const Schema = mongoose.Schema;
 
 const reviewSchema = new Schema({
   
+  location: [{
+      type: Schema.Types.ObjectId,
+     
+      ref: "Business"
+  }],
   author:{type: String},
   comment:{type: String },
   service:{type: String },
