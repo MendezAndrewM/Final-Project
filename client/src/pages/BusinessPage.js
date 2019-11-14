@@ -47,21 +47,7 @@ class BusinessPage extends Component {
                         price: 623
                     }
                 ],
-                reviews: [
-                    // {
-                    //     title: "Trustworthy Service",
-                    //     rating: 3,
-                    //     service: "Service Ipsum",
-                    //     price: 230,
-                    //     content: "Sure fo shizzle dolizzle sit go to hizzle, cool pot elizzle. Away da bomb get down get down, aliquet volutpat, arousipizzle quis, fo shizzle mah nizzle fo rizzle, mah home g-dizzle vizzle, you son of a bizzle. Pellentesque mofo tortizzle. Sed erizzle."
-                    // },
-                    // {
-                    //     title: "fo shizzle nibh and turpis",
-                    //     rating: 2.5,
-                    //     service: "PlaceHolder Repair",
-                    //     price: 532,
-                    //     content: "Vivamizzle you son of a bizzle mauris yippiyo nisi black pretizzle. Vivamizzle sit my shizz shiz. That's the shizzle had nisl gangsta lacizzle auctizzle yo mamma. Shizzlin dizzle fizzle viverra izzle."
-                    // },
+                // reviews: [
                     // {
                     //     title: "dawg risus break yo neck",
                     //     rating: 1.5,
@@ -69,21 +55,16 @@ class BusinessPage extends Component {
                     //     price: 230,
                     //     content: "Crunk malesuada bibendum maurizzle. Crazy izzle yippiyo my nizzle augue porta pizzle. Nizzle sizzle augue. Pizzle sagittizzle. Praesent had lacus quis yo posuere adipiscing. Donizzle boofron izzle felis black get down get down. Integer fo shizzle. Nam shizznit. Like erizzle away, doggy daahng dawg, porttitizzle rizzle, imperdizzle rizzle, ass. Integizzle shut up the shizzle up black fo shizzle. Go to hizzle solicitudizzle mofo sizzle. Away mi things, convallizzle izzle, pellentesque vel, ultricizzle in, nibh. Bling bling erizzle, cool had, owned had, aliquet dizzle, fizzle. Fusce mauris risizzle, varizzle i saw beyonce tizzles and my pizzle went crizzle, adipiscing sizzle, away sizzle we gonna chung, you son of a bizzle."
                     // },
-                    // {
-                    //     title: "Crizzle aliquizzle",
-                    //     rating: 2,
-                    //     service: "Service Ipsum",
-                    //     price: 230,
-                    //     content: "Nam fo shizzle dolor pizzle fo shizzle mah nizzle fo rizzle, mah home g-dizzle. Owned facilisi."
-                    // }
-                ]
-            }
+                // ]
+            },
+            Reviews: []
         }
         this.loadBusinesses = this.loadBusinesses.bind(this)
     }
 
     componentDidMount() {
         this.loadBusinesses();
+        this.getReviews();
     }
 
     loadBusinesses = () => {
@@ -98,7 +79,10 @@ class BusinessPage extends Component {
         API.getBusiness()
             .then(res => this.setState({ Profile: res.data }))
     }
-
+    getReviews() {
+        API.testThing()
+            .then(res => this.setState({ Reviews: res.data }))
+    }
 
     render() {
         return (
@@ -121,10 +105,8 @@ class BusinessPage extends Component {
 
             {/* <ServicePrices 
                 services={this.state.Profile[0].servicesProvided} 
-                />
-                <Reviews 
-                reviews={this.state.Profile[0].reviews}  */}
-            {/* /> */}
+                /> 
+            <Reviews reviews={this.state.Reviews} /> */}
         </>)
     }
 }

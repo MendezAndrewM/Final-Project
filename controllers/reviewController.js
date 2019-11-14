@@ -37,5 +37,12 @@ module.exports = {
           .then(dbModel => dbModel.remove())
           .then(dbModel => res.json(dbModel))
           .catch(err => res.status(422).json(err));
+      },
+      findForBusiness: (req, res) => {
+        db.Review
+        .find({ businessId: req.params.id })
+        // .sort({})
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err));
       }
 }
