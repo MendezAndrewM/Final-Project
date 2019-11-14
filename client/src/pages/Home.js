@@ -6,11 +6,13 @@ import Jumbotron from "../components/Jumbotron";
 import Result from "../components/Results";
 import _About from "../components/About";
 import displayStars from "../utils/utils";
+import Loading from "../components/Loading";
 import { Link } from "react-router-dom";
 import { Query } from "mongoose";
 
 class Home extends Component {
     state = {
+        gotData: false,
         businesses:[],
         query: ""
     }
@@ -28,7 +30,7 @@ class Home extends Component {
     loadBusinesses = () => {
         API.getBusinesses()
         .then(res => this.setState({businesses: res.data }))  
-        // .then(console.log(this.state.businesses))
+        .then(res => this.setState({ gotData: true }))
         .catch(err => console.log(err))
     }
 
@@ -54,7 +56,6 @@ class Home extends Component {
         
         render() {
 
-        
             return (
                 <div>
                 <Jumbotron 
@@ -68,7 +69,9 @@ class Home extends Component {
                         {this.state.loggedIn ? <_About /> : <></>}
                         <br></br>
                         <h3>Featured Businesses</h3>
-                        {this.state.businesses.filter(obj => !obj.author)
+                        {!this.state.gotData
+                        ? <Loading size="scene" />
+                        : this.state.businesses.filter(obj => !obj.author)
                         .map(obj =>
                             <Result 
                             name={obj.name} 
