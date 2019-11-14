@@ -47,10 +47,8 @@ export default {
 
   saveReview: function(reviewData) {
     console.log(reviewData);
-    const config = {
-
-    }
-    axios.post()
+    
+    
     return axios.post("/api/review", reviewData);
   },
 
