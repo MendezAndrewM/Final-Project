@@ -51,19 +51,21 @@ class ReviewForm extends Component {
           author: "anon"
         })
       }  
-      }  
-      const model = {
-        "location": [],
-        "author": this.state.author,
-        "comment": this.state.comment,
-        "service": this.state.service,
-        "payment": this.state.payment,
-        "rating": this.state.rating
-      }
-        API.saveReview(model).then(res => alert(res)).catch(err => {
+      }  else {
+
+        const model = {
+          "location": [],
+          "author": this.state.author,
+          "comment": this.state.comment,
+          "service": this.state.service,
+          "payment": this.state.payment,
+          "rating": this.state.rating
+        }
+        API.saveReview(model).then(res => console.log(res)).catch(err => {
           console.log(err)
         });
         alert("Thank you for your review!")
+      }
 
       
       this.setState({
