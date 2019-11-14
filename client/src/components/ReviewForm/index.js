@@ -9,10 +9,7 @@ import {useParams} from "react-router";
 
 
 class ReviewForm extends Component {
-    
- 
     state = {
-      
       author: "",
       comment: "",
       service: "",
@@ -46,26 +43,29 @@ class ReviewForm extends Component {
 
     handleFormSubmit = event => {
       event.preventDefault();
+      console.log(this.state);
       if (!this.state.comment || !this.state.service || !this.state.payment || !this.state.rating) {
-        alert("Fill out the whole name please:)");
+        alert("Fill out the whole Form please:)");
       if (!this.state.author){
         this.setState({
           author: "anon"
         })
       }  
-      } else {
-
-        API.saveReview({
-          
-          author: this.state.author,
-          comment: this.state.comment,
-          service: this.state.service,
-          payment: this.state.payment,
-          rating: this.state.rating
-        }).catch(err => console.log(err))
+      }  
+      const model = {
+        "location": [],
+        "author": this.state.author,
+        "comment": this.state.comment,
+        "service": this.state.service,
+        "payment": this.state.payment,
+        "rating": this.state.rating
+      }
+        API.saveReview(model).then(res => alert(res)).catch(err => {
+          console.log(err)
+        });
         alert("Thank you for your review!")
 
-      }
+      
       this.setState({
         author: "",
         comment: "",
