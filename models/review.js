@@ -10,6 +10,7 @@ const reviewSchema = new Schema({
       ref: "Business"
   }],
   author:{type: String},
+  businessId: String,
   comment:{type: String },
   service:{type: String },
   payment:{type: String},  

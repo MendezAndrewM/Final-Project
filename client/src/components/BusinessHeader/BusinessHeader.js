@@ -4,6 +4,7 @@ import "./BusinessHeader.css";
 
 
 // Props used: 
+    // _id
     // img1
     // img2
     // header

@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const businessController = require("../../controllers/businessController");
+const reviewController = require("../../controllers/reviewController");
 
 // Matches with "/api/business"
 router
@@ -13,5 +14,9 @@ router
   .get(businessController.findById)
   .put(businessController.update)
   .delete(businessController.remove);
+
+router
+  .route(":id/review")
+  .get(reviewController.findForBusiness)
 
 module.exports = router;

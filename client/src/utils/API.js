@@ -51,5 +51,6 @@ export default {
     
     return axios.post("/api/review", reviewData);
   },
+  testThing: id => axios.get(`/api/business/${id}/review`)
 
 };
