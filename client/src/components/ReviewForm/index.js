@@ -64,6 +64,7 @@ class ReviewForm extends Component {
           rating: this.state.rating
         }).catch(err => console.log(err))
         alert("Thank you for your review!")
+
       }
       this.setState({
         author: "",
@@ -162,6 +163,7 @@ class ReviewForm extends Component {
                   checked={this.state.rating == 1}
                   onChange={this.handleInputChange}
                   />
+                
                   <span>1</span>
                 </label>
               </div>
@@ -234,7 +236,7 @@ class ReviewForm extends Component {
             <Col s={3} offset="s4">
 
               <button 
-              className="btn waves-effect waves-light" 
+              className="btn waves-effect waves-light sub-button" 
               type="submit" 
               name="action"
               name="rating" 

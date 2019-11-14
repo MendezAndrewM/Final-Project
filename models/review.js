@@ -3,7 +3,12 @@ const Schema = mongoose.Schema;
 
 
 const reviewSchema = new Schema({
-  _id: Schema.Types.ObjectId,
+  
+  location: [{
+      type: Schema.Types.ObjectId,
+     
+      ref: "Business"
+  }],
   author:{type: String},
   comment:{type: String },
   service:{type: String },
