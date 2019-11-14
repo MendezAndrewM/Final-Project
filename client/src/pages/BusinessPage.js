@@ -94,6 +94,7 @@ class BusinessPage extends Component {
             <BusinessHeader
                 // img1={ obj.images[0] }
                 // img2={ obj.images[1] }
+                _id={window.location.href.match(/([^\/]+)\/?$/g)[0]}
                 header={this.state.Profile.name}
                 phone={this.state.Profile.phone}
                 streetAddress={this.state.Profile.address.street}
