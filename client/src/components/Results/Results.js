@@ -16,7 +16,7 @@ const Result = props => {
                     <Row>
                         <h5 className="col s12 m7">{props.name}</h5>
                         <div className="col s12 m5">
-                            <span className="rating">{props.avgRating}</span>
+                            <span className="rating material-icons">{props.avgRating}</span>
                             <br></br>
                             {comp > 0
                                 ? <span className="priceRank">{comp}% more than average</span>
