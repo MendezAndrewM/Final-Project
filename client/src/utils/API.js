@@ -45,8 +45,13 @@ export default {
     return axios.delete("/api/reviews/" + id);
   },
 
-  saveReview: function(reviewData, id) {
-    return axios.post("/api/reviews", reviewData);
+  saveReview: function(reviewData) {
+    console.log(reviewData);
+    const config = {
+
+    }
+    axios.post()
+    return axios.post("/api/review", reviewData);
   },
 
 };
