@@ -1,0 +1,139 @@
+.scene {
+    margin: 30vh 40vw;
+    width: 200px;
+    height: 200px;
+    perspective: 600px;
+}
+.cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: aliceblue;
+    font-size: 2.25em;
+    text-align: center;
+    line-height: 5em;
+    transform-style: preserve-3d;
+    -webkit-animation: cube-animation 30s infinite;
+    -webkit-animation: cube-animation 30s infinite;
+	-moz-animation: cube-animation 30s infinite;
+    animation: cube-animation 30s infinite;
+}
+.cubeFace {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+.frontFacing {
+    transform: rotateY(  0deg) translateZ(100px);
+    background-color: rgba(66, 99, 112, 0.94);
+    border: solid 1px black;
+}
+.backFacing {
+    transform: rotateY( 90deg) translateZ(100px);
+    background-color: rgba(73, 101, 112, 0.94);
+    border: solid 1px black;
+}
+.rightFacing {
+    transform: rotateY(180deg) translateZ(100px);
+    background-color: rgba(46, 69, 78, 0.94);
+    border: solid 1px black;
+}
+.leftFacing {
+    transform: rotateY(-90deg) translateZ(100px);
+    background-color:rgba(35, 53, 59, 0.94);
+    border: solid 1px black;
+}
+.topFacing {
+    transform: rotateX( 90deg) translateZ(100px);
+    background-color: rgba(27, 39, 44, 0.94);
+    border: solid 1px black;
+}
+.bottomFacing {
+    transform: rotateX(-90deg) translateZ(100px);
+    background-color: rgba(21, 35, 41, 0.938);
+    border: solid 1px black;
+}
+
+/***********************************************************************************************  
+**********     Cube Animations      **********
+**********************************************/
+
+/****************     Desktop Cube     ****************/
+@-webkit-keyframes cube-animation {
+    to { transform: rotateX(-1080deg) rotateZ(2520deg) }
+}
+@-moz-keyframes cube-animation {
+    to { transform: rotateX(-1080deg) rotateZ(2520deg) }
+}
+@keyframes cube-animation {
+    to { transform: rotateX(-1080deg) rotateZ(2520deg) }
+}
+
+/****************     Tablet Cube     ****************/
+@-webkit-keyframes cube-animation-md {
+    0% {top: 0px; left: 0px; transform: rotateX(0deg) rotateZ(0deg);}
+    50% {top: 100px; left:100px; transform: rotateX(-540deg) rotateZ(1260deg);}
+    100% {top: 0px; left: 0px; transform: rotateX(-1080deg) rotateZ(2520deg);}
+}
+@-moz-keyframes cube-animation-md {
+    0% {top: 0px; left: 0px; transform: rotateX(0deg) rotateZ(0deg);}
+    50% {top: 100px; left:100px; transform: rotateX(-540deg) rotateZ(1260deg);}
+    100% {top: 0px; left: 0px; transform: rotateX(-1080deg) rotateZ(2520deg);}
+}
+@keyframes cube-animation-md {
+    0% {top: 0px; left: 0px; transform: rotateX(0deg) rotateZ(0deg);}
+    50% {top: 100px; left:100px; transform: rotateX(-540deg) rotateZ(1260deg);}
+    100% {top: 0px; left: 0px; transform: rotateX(-1080deg) rotateZ(2520deg);}
+}
+
+/****************     Mobile Cube     ****************/
+@-webkit-keyframes cube-animation-sm {
+    0% {top: 0px; left: 0px; transform: rotateX(0deg) rotateY(0deg);}
+    50% {top: 0px; left:0px; transform: rotateX(0deg) rotateY(1260deg);}
+    100% {top: 0px; left: 0px; transform: rotateX(0deg) rotateY(2880deg);}
+}
+@-moz-keyframes cube-animation-sm {
+    0% {top: 0px; left: 0px; transform: rotateX(0deg) rotateY(0deg);}
+    50% {top: 0px; left:0px; transform: rotateX(0deg) rotateY(1260deg);}
+    100% {top: 0px; left: 0px; transform: rotateX(0deg) rotateY(2880deg);}
+}
+@keyframes cube-animation-sm {
+    0% {top: 0px; left: 0px; transform: rotateX(0deg) rotateY(0deg);}
+    50% {top: 50px; left:0px; transform: rotateX(1260deg) rotateY(1800deg);}
+    100% {top: 0px; left: 0px; transform: rotateX(2880deg) rotateY(3600deg);}
+}
+
+
+/*********************************************************************************************  
+**********     Media Queries      ************
+**********************************************/
+/* Tablet */
+@media only screen and (max-width: 800px) {
+    .scene {
+        margin: 25vh 35vw 45vh 35vw;
+        width: 100px;
+        height: 100px;
+        perspective: 1000px;
+    }
+    .cube {
+        -webkit-animation: cube-animation-md 30s infinite;
+        -webkit-animation: cube-animation-md 30s infinite;
+	    -moz-animation: cube-animation-md 30s infinite;
+        animation: cube-animation-md 30s infinite;
+     }
+}
+/* Mobile */
+@media only screen and (max-width: 620px) {
+    .scene {
+        margin: 20vh 20vw 45vh 35vw;
+        width: 100px;
+        height: 100px;
+        perspective: 1000px;
+    }
+    .cube {
+        -webkit-animation: cube-animation-sm 30s infinite;
+        -webkit-animation: cube-animation-sm 30s infinite;
+	    -moz-animation: cube-animation-sm 30s infinite;
+        animation: cube-animation-sm 30s infinite;
+     }
+}

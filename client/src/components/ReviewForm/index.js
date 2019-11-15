@@ -9,10 +9,7 @@ import {useParams} from "react-router";
 
 
 class ReviewForm extends Component {
-    
- 
     state = {
-      
       author: "",
       comment: "",
       service: "",
@@ -46,25 +43,31 @@ class ReviewForm extends Component {
 
     handleFormSubmit = event => {
       event.preventDefault();
+      console.log(this.state);
       if (!this.state.comment || !this.state.service || !this.state.payment || !this.state.rating) {
-        alert("Fill out the whole name please:)");
+        alert("Fill out the whole Form please:)");
       if (!this.state.author){
         this.setState({
           author: "anon"
         })
       }  
-      } else {
+      }  else {
 
-        API.saveReview({
-          
-          author: this.state.author,
-          comment: this.state.comment,
-          service: this.state.service,
-          payment: this.state.payment,
-          rating: this.state.rating
-        }).catch(err => console.log(err))
+        const model = {
+          "location": [],
+          "author": this.state.author,
+          "comment": this.state.comment,
+          "service": this.state.service,
+          "payment": this.state.payment,
+          "rating": this.state.rating
+        }
+        API.saveReview(model).then(res => console.log(res)).catch(err => {
+          console.log(err)
+        });
         alert("Thank you for your review!")
       }
+
+      
       this.setState({
         author: "",
         comment: "",
@@ -162,6 +165,7 @@ class ReviewForm extends Component {
                   checked={this.state.rating == 1}
                   onChange={this.handleInputChange}
                   />
+                
                   <span>1</span>
                 </label>
               </div>
@@ -234,7 +238,7 @@ class ReviewForm extends Component {
             <Col s={3} offset="s4">
 
               <button 
-              className="btn waves-effect waves-light" 
+              className="btn waves-effect waves-light sub-button" 
               type="submit" 
               name="action"
               name="rating" 
